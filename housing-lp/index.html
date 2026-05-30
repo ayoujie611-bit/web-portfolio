@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アオキ建築工房｜自然素材と木の温もりの注文住宅</title>
+<meta name="description" content="木と自然素材にこだわる、地域密着の注文住宅。高気密・高断熱で一年中心地よい住まいを。完成見学会・無料カタログを受付中。">
+<!--
+  ポートフォリオ用サンプルLP / 架空の工務店「アオキ建築工房」（注文住宅・来場予約型）
+  想定案件: ランサーズ「木造建築メーカー様LP」「不動産会社向けLP」を想定
+  トンマナ: 温かみ・自然素材・上質（木目/ベージュ＋深緑、写真大きめ、余白広め）。人物顔写真は使わず建築・インテリア写真中心。
+  会社名・実績数値・お客様の声・見学会日程はすべて架空のダミー。写真はUnsplashのフリー素材。制作: (実名)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700;900&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#3a342c; --ink-soft:#7c7264; --line:#e8e1d5;
+    --bg:#ffffff; --cream:#faf6ef; --beige:#f1e9dc; --sand:#e7dcc8;
+    --forest:#3c5240; --forest-d:#2c3e31; --moss:#6f8a5f;
+    --wood:#b08454; --wood-d:#946b3f;
+    --cta:#c9712d; --cta-d:#b05f22;
+    --radius:14px; --shadow-sm:0 8px 26px rgba(60,50,35,.10);
+    --shadow:0 24px 56px rgba(60,50,35,.18); --maxw:880px;
+    --mincho:"Zen Old Mincho",serif; --garamond:"Cormorant Garamond",serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+  body{font-family:"Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:var(--beige);
+    line-height:1.95; -webkit-font-smoothing:antialiased; letter-spacing:.03em; overflow-x:hidden; padding-bottom:84px}
+  img{max-width:100%; display:block}
+  a{color:inherit; text-decoration:none}
+  .lp{max-width:var(--maxw); margin:0 auto; background:var(--bg); box-shadow:0 0 80px rgba(60,50,35,.14); overflow:hidden}
+  .pad{padding-left:24px; padding-right:24px}
+  .center{text-align:center}
+  .reveal{opacity:0; transform:translateY(22px); transition:opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s}
+  .reveal.in{opacity:1; transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+  .eyebrow{font-family:var(--garamond); font-style:italic; color:var(--wood-d); font-size:1.1rem; letter-spacing:.05em; display:block}
+  .h2{font-family:var(--mincho); font-weight:700; color:var(--forest-d); font-size:clamp(1.5rem,5.4vw,2.15rem); line-height:1.55; margin-top:4px}
+  .lead{color:var(--ink-soft); margin-top:14px; font-size:.95rem}
+  .sec{padding:66px 0; position:relative}
+  .headwrap{text-align:center; max-width:640px; margin:0 auto}
+  .rule{display:flex; align-items:center; justify-content:center; gap:12px; margin:14px auto 0; color:var(--wood)}
+  .rule::before,.rule::after{content:""; height:1px; width:40px; background:currentColor; opacity:.5}
+  .rule span{font-size:.7rem}
+
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; font-family:var(--mincho); font-weight:700;
+    border-radius:999px; padding:17px 30px; font-size:1.05rem; transition:.22s; border:none; cursor:pointer; line-height:1.3; text-align:center}
+  .btn.cta{background:linear-gradient(180deg,#d7833f,var(--cta)); color:#fff; box-shadow:0 12px 26px rgba(201,113,45,.4)}
+  .btn.cta:hover{transform:translateY(-3px); box-shadow:0 18px 34px rgba(201,113,45,.5)}
+  .btn.ghost{background:#fff; color:var(--forest); border:1.5px solid var(--sand)}
+  .btn.ghost:hover{border-color:var(--forest); background:var(--cream)}
+  .btn small{display:block; font-size:.68rem; font-weight:500; opacity:.92; margin-top:1px; font-family:"Noto Sans JP"}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
+  .cta-row .btn{flex:1 1 230px; flex-direction:column}
+
+  /* ヘッダー */
+  header{position:sticky; top:0; z-index:50; background:rgba(250,246,239,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+  header .bar{display:flex; align-items:center; justify-content:space-between; padding:11px 20px}
+  .logo{display:flex; align-items:center; gap:9px; font-family:var(--mincho); font-weight:700; color:var(--forest-d); font-size:1.08rem}
+  .logo .mark{width:30px; height:30px; flex:none}
+  header .hbtn{background:var(--forest); color:#fff; font-family:var(--mincho); font-weight:700; font-size:.8rem; padding:9px 16px; border-radius:8px}
+  header .hbtn:hover{background:var(--moss)}
+  @media(max-width:560px){header .hbtn{display:none}}
+
+  /* ヒーロー */
+  .hero{position:relative; color:#fff; overflow:hidden; min-height:78vh; display:flex; align-items:flex-end}
+  .hero .bgimg{position:absolute; inset:0; z-index:0}
+  .hero .bgimg img{width:100%; height:100%; object-fit:cover}
+  .hero::after{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(44,62,49,.15) 0%,rgba(44,62,49,.2) 45%,rgba(34,48,38,.86) 100%)}
+  .hero .inner{position:relative; z-index:2; padding:40px 24px 40px; width:100%}
+  .hero .badge{display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.3); border-radius:999px; padding:6px 15px; font-size:.76rem; font-weight:700; backdrop-filter:blur(3px)}
+  .hero h1{font-family:var(--mincho); font-weight:700; font-size:clamp(1.9rem,7vw,2.9rem); line-height:1.6; margin:16px 0 12px; text-shadow:0 2px 20px rgba(20,30,22,.5)}
+  .hero h1 .y{color:#f4d59b}
+  .hero p.sub{font-size:.95rem; color:#ede6da; max-width:540px; text-shadow:0 1px 10px rgba(20,30,22,.5)}
+  .hero .cta-row{justify-content:flex-start; margin-top:24px}
+  .hero .cta-row .btn{flex:0 1 220px}
+
+  /* 実績バー */
+  .stats{background:var(--forest); color:#fff}
+  .stats .row{display:flex; flex-wrap:wrap}
+  .stats .st{flex:1 1 33%; text-align:center; padding:22px 8px; border-right:1px solid rgba(255,255,255,.14)}
+  .stats .st:last-child{border-right:none}
+  .stats .st .n{font-family:var(--mincho); font-weight:700; font-size:1.9rem; line-height:1; color:#f4d59b}
+  .stats .st .n .s{font-size:.85rem; color:#cdd9c8}
+  .stats .st .l{font-size:.74rem; color:#cdd9c8; margin-top:6px}
+
+  /* 共感 */
+  .worry{background:var(--cream)}
+  .worry .list{margin-top:30px; display:grid; gap:12px}
+  .wrow{display:flex; align-items:center; gap:14px; background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; box-shadow:var(--shadow-sm)}
+  .wrow .c{width:30px; height:30px; flex:none; border-radius:50%; background:var(--beige); color:var(--wood-d); display:grid; place-items:center; font-weight:700; font-family:var(--mincho)}
+  .wrow p{font-size:.92rem; font-weight:500}
+  .worry .bridge{text-align:center; margin-top:28px; font-family:var(--mincho); font-weight:700; color:var(--forest-d); font-size:clamp(1.15rem,4.6vw,1.5rem); line-height:1.7}
+  .worry .bridge .w{color:var(--wood-d)}
+
+  /* コンセプト/強み */
+  .concept{background:#fff}
+  .concept .fitem{display:flex; gap:20px; align-items:center; margin-top:30px}
+  .concept .fitem:nth-child(even){flex-direction:row-reverse}
+  .concept .fitem img{width:44%; aspect-ratio:4/3; object-fit:cover; border-radius:14px; flex:none; box-shadow:var(--shadow-sm)}
+  .concept .fitem .no{font-family:var(--garamond); font-style:italic; color:var(--wood); font-size:1.3rem}
+  .concept .fitem h3{font-family:var(--mincho); font-weight:700; color:var(--forest-d); font-size:1.25rem; margin:2px 0 8px}
+  .concept .fitem p{font-size:.9rem; color:var(--ink-soft)}
+  @media(max-width:540px){.concept .fitem,.concept .fitem:nth-child(even){flex-direction:column; align-items:stretch} .concept .fitem img{width:100%; aspect-ratio:16/10}}
+
+  /* 施工事例ギャラリー */
+  .works{background:var(--beige)}
+  .gallery{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:30px}
+  .gitem{position:relative; border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm); aspect-ratio:4/3}
+  .gitem img{width:100%; height:100%; object-fit:cover; transition:.4s}
+  .gitem:hover img{transform:scale(1.05)}
+  .gitem .cap{position:absolute; left:0; right:0; bottom:0; padding:18px 14px 12px; color:#fff; font-size:.8rem; font-weight:700;
+    background:linear-gradient(transparent,rgba(34,48,38,.8))}
+  .gitem.wide{grid-column:1 / -1; aspect-ratio:16/7}
+
+  /* 性能 */
+  .perf{background:var(--forest-d); color:#fff}
+  .perf .h2{color:#fff} .perf .eyebrow{color:#f4d59b}
+  .perf .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:32px}
+  .pcard{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:22px 18px; text-align:center}
+  .pcard .ic{width:46px; height:46px; margin:0 auto 10px; stroke:#f4d59b; fill:none; stroke-width:1.6}
+  .pcard .v{font-family:var(--mincho); font-weight:700; font-size:1.9rem; color:#f4d59b; line-height:1}
+  .pcard .v .s{font-size:.8rem; color:#cdd9c8}
+  .pcard h4{font-size:.92rem; margin:6px 0 4px} .pcard p{font-size:.76rem; color:#bcc8b6}
+  .perf .note{font-size:.68rem; color:#9fb09a; margin-top:18px; text-align:center}
+
+  /* お客様の声 */
+  .voice{background:var(--cream)}
+  .voice .grid{display:grid; gap:14px; margin-top:30px}
+  .vcard{background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px; box-shadow:var(--shadow-sm)}
+  .vcard .stars{color:#d89a3e; font-size:.9rem; letter-spacing:1px}
+  .vcard p{font-size:.92rem; margin:10px 0 14px}
+  .vcard .hl{background:linear-gradient(transparent 62%,#f1e3c4 62%); font-weight:700}
+  .vcard .who{display:flex; align-items:center; gap:10px; font-size:.78rem; color:var(--ink-soft)}
+  .vcard .who .av{width:40px; height:40px; border-radius:50%; flex:none; background:var(--moss); color:#fff; display:grid; place-items:center; font-family:var(--mincho); font-weight:700}
+  .vcard .who b{color:var(--forest-d); font-size:.84rem}
+
+  /* 流れ */
+  .flow{background:#fff}
+  .flow .steps{margin-top:30px}
+  .fstep{display:flex; gap:18px; padding-bottom:26px; position:relative}
+  .fstep:not(:last-child)::before{content:""; position:absolute; left:21px; top:44px; bottom:0; width:2px; background:var(--sand)}
+  .fstep .n{width:44px; height:44px; flex:none; border-radius:50%; background:var(--forest); color:#fff; display:grid; place-items:center; font-family:var(--mincho); font-weight:700; z-index:1}
+  .fstep h4{font-family:var(--mincho); font-weight:700; color:var(--forest-d); font-size:1.05rem; margin-bottom:4px}
+  .fstep p{font-size:.88rem; color:var(--ink-soft)}
+
+  /* 見学会 */
+  .event{background:var(--beige)}
+  .ebox{background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden; margin-top:24px; box-shadow:var(--shadow)}
+  .ebox .top{background:var(--cta); color:#fff; padding:16px 20px; display:flex; align-items:center; gap:12px}
+  .ebox .top .lbl{background:rgba(255,255,255,.22); border-radius:6px; padding:3px 10px; font-size:.72rem; font-weight:700}
+  .ebox .top h3{font-family:var(--mincho); font-weight:700; font-size:1.15rem}
+  .ebox .body{padding:22px 20px}
+  .ebox .meta{display:grid; gap:10px}
+  .ebox .meta .m{display:flex; gap:12px; align-items:flex-start; font-size:.9rem}
+  .ebox .meta .m .k{flex:none; width:64px; color:var(--wood-d); font-weight:700; font-family:var(--mincho)}
+  .ebox .seats{margin-top:14px; background:var(--cream); border-radius:10px; padding:10px 14px; font-size:.82rem; color:var(--ink-soft)}
+  .ebox .seats b{color:var(--cta)}
+
+  /* FAQ */
+  .faq{background:var(--cream)}
+  .qa{background:#fff; border:1px solid var(--line); border-radius:12px; margin-top:12px; overflow:hidden}
+  .qa button{width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:18px 20px; font-size:.95rem; font-weight:700; color:var(--forest-d); display:flex; justify-content:space-between; gap:12px; font-family:inherit; align-items:center}
+  .qa button .q::before{content:"Q. "; color:var(--wood-d); font-family:var(--mincho); font-weight:700}
+  .qa .plus{flex:none; color:var(--wood-d); font-size:1.3rem; transition:.25s}
+  .qa[aria-expanded="true"] .plus{transform:rotate(45deg)}
+  .qa .ab{max-height:0; overflow:hidden; transition:max-height .3s}
+  .qa .ab p{padding:0 20px 18px; font-size:.88rem; color:var(--ink-soft)}
+
+  /* 最終CTA */
+  .final{position:relative; color:#fff; text-align:center; overflow:hidden}
+  .final .bgimg{position:absolute; inset:0; z-index:0}
+  .final .bgimg img{width:100%; height:100%; object-fit:cover}
+  .final::after{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(160deg,rgba(44,62,49,.88),rgba(34,48,38,.92))}
+  .final .inner{position:relative; z-index:2; padding:64px 24px}
+  .final .h2{color:#fff} .final .eyebrow{color:#f4d59b}
+  .final p{color:#ede6da; margin:14px 0 26px}
+  .final .cta-row .btn.ghost{background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.35)}
+  .final .tel{margin-top:22px; font-size:.85rem; color:#cdd9c8}
+  .final .tel b{font-family:var(--mincho); font-size:1.5rem; color:#fff; display:block}
+
+  footer{background:var(--forest-d); color:#a9b6a3; font-size:.78rem; padding:34px 0; text-align:center}
+  footer .logo{color:#fff; justify-content:center; margin-bottom:10px}
+  .disclaimer{font-size:.68rem; color:#82907d; margin-top:14px; line-height:1.7; text-align:left}
+
+  .sticky{position:fixed; bottom:0; left:0; right:0; z-index:60; background:rgba(250,246,239,.97); border-top:1px solid var(--line); padding:10px 14px; backdrop-filter:blur(8px); box-shadow:0 -6px 20px rgba(60,50,35,.1)}
+  .sticky .cta-row{max-width:560px; margin:0 auto}
+  .sticky .btn{padding:13px 18px; font-size:.92rem}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="lp">
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="bar">
+      <a class="logo" href="#"><svg class="mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="9" fill="#3c5240"/><path d="M9 22 L20 11 L31 22" stroke="#f4d59b" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 21 V30 H27 V21" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> アオキ建築工房</a>
+      <a href="#contact" class="hbtn">来場予約</a>
+    </div>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="bgimg"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=70" alt="自然素材の注文住宅の外観"></div>
+    <div class="inner pad">
+      <span class="badge">🌿 地域密着・自然素材の家づくり</span>
+      <h1>木の温もりに包まれる、<br><span class="y">家族の居場所</span>を。</h1>
+      <p class="sub">無垢の木と自然素材にこだわった、高気密・高断熱の注文住宅。一年を通して心地よい住まいを、土地探しから一緒に。</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn cta">完成見学会を予約する<small>参加無料・お子様連れOK</small></a>
+        <a href="#contact" class="btn ghost">無料カタログを請求する<small>施工事例集をお届け</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 実績バー -->
+  <div class="stats">
+    <div class="row">
+      <div class="st"><div class="n">1,200<span class="s">棟+</span></div><div class="l">施工実績（累計）</div></div>
+      <div class="st"><div class="n">98<span class="s">%</span></div><div class="l">お客様満足度※</div></div>
+      <div class="st"><div class="n">35<span class="s">年</span></div><div class="l">長期保証</div></div>
+    </div>
+  </div>
+
+  <!-- 共感 -->
+  <section class="sec worry pad">
+    <div class="headwrap">
+      <span class="eyebrow">Worries</span>
+      <h2 class="h2 reveal">家づくり、<br>こんな不安はありませんか？</h2>
+    </div>
+    <div class="list">
+      <div class="wrow reveal"><span class="c">1</span><p>何から始めればいいのか、進め方が分からない</p></div>
+      <div class="wrow reveal d1"><span class="c">2</span><p>予算内で本当に理想の家が建てられるのか不安</p></div>
+      <div class="wrow reveal"><span class="c">3</span><p>冬は寒く夏は暑い家になってしまわないか心配</p></div>
+      <div class="wrow reveal d1"><span class="c">4</span><p>建てた後のメンテナンスや保証が気になる</p></div>
+    </div>
+    <p class="bridge reveal">その不安、<span class="w">土地探しから引き渡し後まで</span><br>私たちが一緒に解消します。</p>
+  </section>
+
+  <!-- コンセプト/強み -->
+  <section class="sec concept pad">
+    <div class="headwrap">
+      <span class="eyebrow">Our Promise</span>
+      <h2 class="h2 reveal">アオキ建築工房の<br>3つの約束</h2>
+    </div>
+    <div class="fitem reveal">
+      <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=600&q=70" alt="無垢材を使ったリビング">
+      <div><div class="no">01</div><h3>本物の自然素材</h3><p>無垢のフローリング、漆喰の壁、自然由来の断熱材。調湿性に優れ、年月とともに味わいが増す、家族にやさしい素材だけを使います。</p></div>
+    </div>
+    <div class="fitem reveal">
+      <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=70" alt="高断熱の快適な室内">
+      <div><div class="no">02</div><h3>一年中、心地よい性能</h3><p>高気密・高断熱の設計で、夏は涼しく冬は暖かい。冷暖房に頼りすぎない、省エネで健康的な住まいを実現します。</p></div>
+    </div>
+    <div class="fitem reveal">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=70" alt="暮らしに合わせた間取り">
+      <div><div class="no">03</div><h3>暮らしから考える設計</h3><p>流行のデザインありきではなく、ご家族の暮らし方をていねいにヒアリング。10年後も心地よい間取りを一緒に描きます。</p></div>
+    </div>
+  </section>
+
+  <!-- 施工事例 -->
+  <section class="sec works pad">
+    <div class="headwrap">
+      <span class="eyebrow">Works</span>
+      <h2 class="h2 reveal">施工事例</h2>
+      <p class="lead reveal">これまでにお引き渡しした住まいの一例です。</p>
+    </div>
+    <div class="gallery">
+      <div class="gitem wide reveal"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=70" alt="木の家の外観"><span class="cap">片流れ屋根と木格子の家｜4LDK</span></div>
+      <div class="gitem reveal"><img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=500&q=70" alt="吹き抜けリビング"><span class="cap">光が抜ける吹き抜けリビング</span></div>
+      <div class="gitem reveal d1"><img src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=500&q=70" alt="木のキッチン"><span class="cap">造作の木製キッチン</span></div>
+      <div class="gitem reveal"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=500&q=70" alt="畳スペース"><span class="cap">畳でくつろぐ和の空間</span></div>
+      <div class="gitem reveal d1"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=500&q=70" alt="ウッドデッキ"><span class="cap">庭とつながるウッドデッキ</span></div>
+    </div>
+  </section>
+
+  <!-- 性能 -->
+  <section class="sec perf pad">
+    <div class="headwrap">
+      <span class="eyebrow">Performance</span>
+      <h2 class="h2 reveal">見えない部分に、<br>いちばんこだわる。</h2>
+    </div>
+    <div class="grid">
+      <div class="pcard reveal">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M12 2L3 7v7c0 5 4 7 9 8 5-1 9-3 9-8V7z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div class="v">耐震<span class="s"> 等級3</span></div><h4>最高等級の構造</h4><p>消防署・警察署と同等の耐震性能を標準仕様に。</p>
+      </div>
+      <div class="pcard reveal d1">
+        <svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+        <div class="v">UA値<span class="s"> 0.46</span></div><h4>高断熱の設計</h4><p>国の基準を上回る断熱性で、冷暖房費を抑えます。</p>
+      </div>
+      <div class="pcard reveal">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3C9.5 6 9.5 18 12 21"/><circle cx="12" cy="12" r="9"/></svg>
+        <div class="v">C値<span class="s"> 0.5</span></div><h4>すき間の少ない家</h4><p>気密測定を全棟で実施。計画換気が正しく機能します。</p>
+      </div>
+      <div class="pcard reveal d1">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg>
+        <div class="v">35<span class="s">年保証</span></div><h4>長期のサポート</h4><p>定期点検とアフター保証で、建てた後も安心です。</p>
+      </div>
+    </div>
+    <p class="note">※ 数値は標準仕様の目安です。プラン・敷地条件により変動します。UA値・C値は第三者機関の測定に基づきます（架空のサンプル値）。</p>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="sec voice pad">
+    <div class="headwrap">
+      <span class="eyebrow">Voice</span>
+      <h2 class="h2 reveal">建てたご家族の声</h2>
+      <p class="lead reveal">※ 感想の一例です。</p>
+    </div>
+    <div class="grid">
+      <div class="vcard reveal">
+        <div class="stars">★★★★★</div>
+        <p>「<span class="hl">無垢の床が本当に気持ちよく</span>、子どもが裸足で走り回っています。冬も床が冷たくないのに驚きました。」</p>
+        <div class="who"><div class="av">T</div><div><b>T様ご家族</b><br>4人暮らし・市内</div></div>
+      </div>
+      <div class="vcard reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>「土地探しから親身に相談に乗ってくれて、<span class="hl">予算内で理想の間取り</span>が叶いました。引き渡し後の点検も丁寧です。」</p>
+        <div class="who"><div class="av">K</div><div><b>K様ご家族</b><br>3人暮らし・近郊</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 流れ -->
+  <section class="sec flow pad">
+    <div class="headwrap">
+      <span class="eyebrow">Flow</span>
+      <h2 class="h2 reveal">家づくりの流れ</h2>
+    </div>
+    <div class="steps">
+      <div class="fstep reveal"><div class="n">1</div><div><h4>ご相談・見学会</h4><p>完成見学会で実際の空気感を体感。家づくりの疑問を何でもご相談ください。</p></div></div>
+      <div class="fstep reveal"><div class="n">2</div><div><h4>資金計画・土地探し</h4><p>無理のない予算組みから。土地をお持ちでない方も一緒にお探しします。</p></div></div>
+      <div class="fstep reveal"><div class="n">3</div><div><h4>プラン設計・お見積り</h4><p>暮らし方をヒアリングし、間取りと費用をご提案。納得いくまで一緒に。</p></div></div>
+      <div class="fstep reveal"><div class="n">4</div><div><h4>ご契約・着工・お引き渡し</h4><p>工事中も進捗を共有。お引き渡し後も定期点検で長くサポートします。</p></div></div>
+    </div>
+  </section>
+
+  <!-- 見学会 -->
+  <section class="sec event pad">
+    <div class="headwrap">
+      <span class="eyebrow">Event</span>
+      <h2 class="h2 reveal">完成見学会のご案内</h2>
+    </div>
+    <div class="ebox reveal">
+      <div class="top"><span class="lbl">予約制</span><h3>「光と風が抜ける平屋」完成見学会</h3></div>
+      <div class="body">
+        <div class="meta">
+          <div class="m"><span class="k">日　程</span><span>毎週 土・日・祝（10:00〜17:00）</span></div>
+          <div class="m"><span class="k">会　場</span><span>市内モデル住宅（ご予約時に詳細をご案内）</span></div>
+          <div class="m"><span class="k">参加費</span><span>無料・お子様連れ歓迎（キッズスペースあり）</span></div>
+          <div class="m"><span class="k">特　典</span><span>ご来場の方に「家づくり予算ガイド」プレゼント</span></div>
+        </div>
+        <div class="seats">各回 <b>3組さま限定</b> のゆったりご案内。ご希望日はお早めにご予約ください。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq pad">
+    <div class="headwrap">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2 reveal">よくあるご質問</h2>
+    </div>
+    <div style="margin-top:20px">
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">土地がなくても相談できますか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>はい。土地探しからお手伝いします。ご希望のエリアや予算をうかがい、家づくりと合わせて最適なご提案をします。</p></div></div>
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">予算が決まっていなくても大丈夫ですか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>もちろんです。住宅ローンや諸費用を含めた資金計画から一緒に整理しますので、漠然とした段階でもお気軽にご相談ください。</p></div></div>
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">建てた後の保証はどうなっていますか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>定期点検と長期保証でサポートします（保証内容は仕様・契約により異なります）。お引き渡し後も末永くお付き合いください。</p></div></div>
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">見学会は予約しないと参加できませんか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>ゆったりとご案内するため予約制としています。ご希望の日時をフォームまたはお電話でお知らせください。</p></div></div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="final" id="contact">
+    <div class="bgimg"><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=1100&q=70" alt="木の家のある暮らし"></div>
+    <div class="inner pad">
+      <span class="eyebrow">Contact</span>
+      <h2 class="h2 reveal">まずは、<br>“本物の木の家”を体感しに。</h2>
+      <p>完成見学会は予約制・参加無料。<br>カタログだけのご請求も歓迎です。お気軽にどうぞ。</p>
+      <div class="cta-row">
+        <a href="#" class="btn cta" onclick="alert('※ポートフォリオ用サンプルです。実際は予約フォームに接続します。');return false;">完成見学会を予約する<small>参加無料・お子様連れOK</small></a>
+        <a href="#" class="btn ghost" onclick="alert('※ポートフォリオ用サンプルです。実際は資料請求フォームに接続します。');return false;">無料カタログを請求する<small>施工事例集をお届け</small></a>
+      </div>
+      <div class="tel">お電話でのご予約（9:00〜18:00 / 水曜定休）<b>0120-000-000</b></div>
+    </div>
+  </section>
+
+  <footer><div class="pad">
+    <div class="logo"><svg class="mark" viewBox="0 0 40 40" style="width:26px;height:26px"><rect width="40" height="40" rx="9" fill="#6f8a5f"/><path d="M9 22 L20 11 L31 22" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 21 V30 H27 V21" stroke="#f4d59b" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> アオキ建築工房</div>
+    <p>自然素材と木の温もりの注文住宅</p>
+    <p class="disclaimer">※本ページはポートフォリオ用の架空サンプルです。「アオキ建築工房」は実在しない架空の工務店で、社名・実績数値・性能値・お客様の声・見学会日程・電話番号はすべてダミーです。性能値は架空のサンプルで、実際の住宅性能を示すものではありません。掲載写真はUnsplashのフリー素材を使用しており、実在の施工事例ではありません。実在の企業・人物とは一切関係ありません。</p>
+  </div></footer>
+
+</div>
+
+<!-- スティッキーCTA -->
+<div class="sticky">
+  <div class="cta-row">
+    <a href="#contact" class="btn cta">来場予約</a>
+    <a href="#contact" class="btn ghost">カタログ請求</a>
+  </div>
+</div>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  document.querySelectorAll('.qa button').forEach(function(b){
+    b.addEventListener('click',function(){var qa=b.parentElement,ab=qa.querySelector('.ab'),open=qa.getAttribute('aria-expanded')==='true';
+      qa.setAttribute('aria-expanded',String(!open)); ab.style.maxHeight=open?null:ab.scrollHeight+'px';});
+  });
+</script>
+</body>
+</html>
