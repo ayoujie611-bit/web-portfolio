@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あおぞら歯科クリニック｜痛みに配慮する、通いやすい歯医者さん</title>
+<meta name="description" content="痛みへの配慮と、土日診療・駅徒歩2分の通いやすさ。お子様から大人まで安心して通える歯科医院。WEB予約は24時間受付。">
+<!--
+  ポートフォリオ用サンプルLP / 架空の歯科「あおぞら歯科クリニック」（WEB予約獲得型）
+  訴求(一点): 「痛みに配慮する、通いやすい歯科」。歯科は不安(痛い/怖い/高い)の解消と通いやすさが予約の決め手の業態。安心・清潔・やわらかいトーンで、CTAはWEB予約。
+  医療広告ガイドライン配慮: 「痛くない」等の断定や、効果の保証・誇大表現は避け、「配慮」「努めています」等の表現に。院名・実績・口コミ・住所はすべて架空のダミー。写真はUnsplashのフリー素材。制作: (実名)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2c3a44; --ink-soft:#647682; --line:#e3edf2;
+    --bg:#ffffff; --sky:#f1f8fb; --sky-2:#e6f3f8; --mint:#eef8f5;
+    --teal:#1f9bb3; --teal-d:#157d92; --blue:#3a86c8; --navy:#1f4d63;
+    --cta:#ff7a59; --cta-d:#ef6442; --warm:#ffb347;
+    --radius:18px; --shadow-sm:0 8px 26px rgba(31,77,99,.08);
+    --shadow:0 24px 56px rgba(31,77,99,.16); --maxw:900px;
+    --maru:"Zen Maru Gothic","Noto Sans JP",sans-serif; --gara:"Cormorant Garamond",serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+  body{font-family:"Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:var(--sky);
+    line-height:1.95; -webkit-font-smoothing:antialiased; letter-spacing:.02em; overflow-x:hidden; padding-bottom:80px}
+  img{max-width:100%; display:block}
+  a{color:inherit; text-decoration:none}
+  .lp{max-width:var(--maxw); margin:0 auto; background:var(--bg); box-shadow:0 0 80px rgba(31,77,99,.12); overflow:hidden}
+  .pad{padding-left:26px; padding-right:26px}
+  @media(max-width:560px){.pad{padding-left:20px; padding-right:20px}}
+  .reveal{opacity:0; transform:translateY(20px); transition:opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s}
+  .reveal.in{opacity:1; transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+  .label{font-family:var(--gara); font-weight:600; color:var(--teal-d); font-size:1.1rem; letter-spacing:.12em; display:inline-block}
+  .label .ja{display:block; font-family:var(--maru); font-weight:700; font-size:.76rem; color:var(--ink-soft); letter-spacing:.16em; margin-top:3px}
+  .h2{font-family:var(--maru); font-weight:900; color:var(--navy); font-size:clamp(1.55rem,5.4vw,2.2rem); line-height:1.55; margin-top:12px; letter-spacing:.02em}
+  .lead{color:var(--ink-soft); margin-top:14px; font-size:.97rem}
+  .sec{padding:74px 0; position:relative}
+  @media(max-width:560px){.sec{padding:56px 0}}
+  .headwrap{max-width:620px}
+  .headwrap.c{margin:0 auto; text-align:center}
+
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; font-family:var(--maru); font-weight:900;
+    border-radius:999px; padding:18px 32px; font-size:1.04rem; transition:.25s; border:none; cursor:pointer; line-height:1.3}
+  .btn.cta{background:linear-gradient(180deg,#ff8d6e,var(--cta)); color:#fff; box-shadow:0 12px 28px rgba(255,122,89,.42)}
+  .btn.cta:hover{transform:translateY(-3px); box-shadow:0 18px 36px rgba(255,122,89,.5)}
+  .btn.ghost{background:#fff; color:var(--teal-d); border:1.5px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--teal); color:var(--teal-d)}
+  .btn small{display:block; font-size:.68rem; font-weight:500; opacity:.92; margin-top:1px}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+  .cta-row .btn{flex:1 1 220px; flex-direction:column}
+
+  /* ヘッダー */
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.95); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+  header .bar{display:flex; align-items:center; justify-content:space-between; padding:12px 26px}
+  .logo{display:flex; align-items:center; gap:10px; font-family:var(--maru); font-weight:900; color:var(--navy); font-size:1.06rem}
+  .logo .mark{width:32px; height:32px; flex:none}
+  header .right{display:flex; align-items:center; gap:14px}
+  header .tel{font-family:var(--gara); font-weight:600; color:var(--teal-d); font-size:1.15rem}
+  header .hbtn{background:var(--cta); color:#fff; font-family:var(--maru); font-weight:700; font-size:.82rem; padding:9px 16px; border-radius:8px}
+  @media(max-width:600px){header .tel{display:none}}
+
+  /* ヒーロー */
+  .hero{position:relative; background:linear-gradient(160deg,var(--sky-2),var(--mint)); overflow:hidden}
+  .hero::before{content:""; position:absolute; top:-15%; right:-10%; width:55%; height:130%; background:radial-gradient(closest-side,rgba(31,155,179,.14),transparent 70%)}
+  .hero .inner{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr .9fr; gap:30px; align-items:center; padding:50px 26px 56px}
+  .hero .badge{display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 16px; font-size:.78rem; font-weight:700; color:var(--teal-d); box-shadow:var(--shadow-sm)}
+  .hero h1{font-family:var(--maru); font-weight:900; color:var(--navy); font-size:clamp(1.9rem,6.4vw,2.9rem); line-height:1.5; margin:18px 0 14px}
+  .hero h1 .em{color:var(--teal-d)}
+  .hero h1 .u{background:linear-gradient(transparent 60%,#bfe8f0 60%)}
+  .hero p.sub{color:var(--ink-soft); font-size:.98rem; max-width:440px}
+  .hero .chips{display:flex; gap:8px; flex-wrap:wrap; margin:20px 0 24px}
+  .hero .chip{background:#fff; border:1px solid var(--line); border-radius:10px; padding:9px 14px; font-size:.82rem; font-weight:700; color:var(--navy); box-shadow:var(--shadow-sm)}
+  .hero .chip b{color:var(--teal-d)}
+  .hero .heroimg{position:relative}
+  .hero .heroimg img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:24px; box-shadow:var(--shadow)}
+  @media(max-width:680px){
+    .hero .inner{grid-template-columns:1fr; gap:24px}
+    .hero .heroimg{order:-1} .hero .heroimg img{aspect-ratio:16/10}
+  }
+
+  /* 不安に寄り添う */
+  .worry{background:#fff}
+  .worry .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:34px}
+  .wcard{background:var(--sky); border-radius:16px; padding:22px 20px; text-align:center}
+  .wcard .ic{font-size:1.6rem; margin-bottom:6px}
+  .wcard p{font-size:.92rem; font-weight:700; color:var(--navy)}
+  .worry .bridge{text-align:center; margin-top:34px; font-family:var(--maru); font-weight:900; color:var(--teal-d); font-size:clamp(1.2rem,4.6vw,1.55rem); line-height:1.7}
+  @media(max-width:520px){.worry .cards{grid-template-columns:1fr}}
+
+  /* 選ばれる理由（特徴） */
+  .feature{background:var(--sky)}
+  .feature .grid{display:grid; gap:16px; margin-top:36px}
+  .fcard{background:#fff; border-radius:18px; padding:26px 24px; box-shadow:var(--shadow-sm); display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:start}
+  .fcard .ic{width:58px; height:58px; flex:none; border-radius:16px; background:linear-gradient(160deg,var(--teal),var(--teal-d)); display:grid; place-items:center; box-shadow:0 8px 18px rgba(31,155,179,.3)}
+  .fcard .ic svg{width:30px; height:30px; stroke:#fff; fill:none; stroke-width:1.8}
+  .fcard .no{font-family:var(--gara); font-weight:600; color:var(--teal-d); font-size:.92rem; letter-spacing:.08em}
+  .fcard h3{font-family:var(--maru); font-weight:900; color:var(--navy); font-size:1.2rem; margin:2px 0 8px}
+  .fcard p{font-size:.92rem; color:var(--ink-soft)}
+
+  /* 診療案内 */
+  .menu{background:#fff}
+  .menu .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:36px}
+  .mcard{background:var(--sky); border-radius:14px; padding:22px 18px; text-align:center}
+  .mcard .ic{width:46px; height:46px; margin:0 auto 10px; border-radius:50%; background:#fff; display:grid; place-items:center; box-shadow:var(--shadow-sm)}
+  .mcard .ic svg{width:24px;height:24px;stroke:var(--teal-d);fill:none;stroke-width:1.8}
+  .mcard h4{font-family:var(--maru); font-weight:900; color:var(--navy); font-size:.98rem; margin-bottom:5px}
+  .mcard p{font-size:.78rem; color:var(--ink-soft); line-height:1.7}
+  @media(max-width:560px){.menu .grid{grid-template-columns:1fr 1fr}}
+
+  /* 院長メッセージ */
+  .doctor{background:var(--mint)}
+  .doctor .card{display:grid; grid-template-columns:.8fr 1.2fr; gap:30px; align-items:center; margin-top:34px; background:#fff; border-radius:22px; padding:30px; box-shadow:var(--shadow-sm)}
+  .doctor .pic img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:18px}
+  .doctor .role{font-family:var(--gara); color:var(--teal-d); font-size:.95rem; letter-spacing:.06em}
+  .doctor h3{font-family:var(--maru); font-weight:900; color:var(--navy); font-size:1.3rem; margin:2px 0 12px}
+  .doctor p{font-size:.92rem; color:var(--ink-soft); line-height:2}
+  @media(max-width:600px){.doctor .card{grid-template-columns:1fr; gap:20px}}
+
+  /* 診療時間・アクセス */
+  .access{background:var(--sky)}
+  .access .box{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:36px}
+  .access .table{background:#fff; border-radius:18px; padding:26px; box-shadow:var(--shadow-sm); overflow-x:auto}
+  .access h3{font-family:var(--maru); font-weight:900; color:var(--navy); font-size:1.1rem; margin-bottom:14px}
+  .access table{width:100%; border-collapse:collapse; font-size:.82rem; min-width:300px}
+  .access th,.access td{border:1px solid var(--line); padding:8px 6px; text-align:center}
+  .access th{background:var(--sky); color:var(--navy); font-weight:700}
+  .access td .o{color:var(--teal-d); font-weight:700}
+  .access .info{background:#fff; border-radius:18px; padding:26px; box-shadow:var(--shadow-sm)}
+  .access .info dl{display:grid; grid-template-columns:4.5em 1fr; gap:10px 12px; font-size:.9rem}
+  .access .info dt{color:var(--teal-d); font-family:var(--maru); font-weight:700}
+  @media(max-width:680px){.access .box{grid-template-columns:1fr}}
+
+  /* FAQ */
+  .faq{background:#fff}
+  .qa{background:var(--sky); border-radius:14px; margin-top:12px; overflow:hidden}
+  .qa button{width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:18px 22px; font-size:.95rem; font-weight:700; color:var(--navy); display:flex; justify-content:space-between; gap:14px; font-family:inherit; align-items:center}
+  .qa button .q::before{content:"Q "; color:var(--teal-d); font-family:var(--gara); font-weight:700}
+  .qa .plus{flex:none; color:var(--teal-d); font-size:1.3rem; transition:.25s}
+  .qa[aria-expanded="true"] .plus{transform:rotate(45deg)}
+  .qa .ab{max-height:0; overflow:hidden; transition:max-height .3s}
+  .qa .ab p{padding:0 22px 18px; font-size:.88rem; color:var(--ink-soft)}
+
+  /* 最終CTA */
+  .final{background:linear-gradient(160deg,var(--teal),var(--teal-d)); color:#fff; text-align:center; position:relative; overflow:hidden}
+  .final::before{content:""; position:absolute; top:-20%; left:50%; transform:translateX(-50%); width:120%; height:80%; background:radial-gradient(closest-side,rgba(255,255,255,.18),transparent 70%)}
+  .final .inner{position:relative; z-index:1; padding:64px 26px}
+  .final .label{color:#cdeef4} .final .h2{color:#fff; margin-top:10px}
+  .final p{color:#e3f5f8; margin:12px 0 26px}
+  .final .cta-row{justify-content:center}
+  .final .cta-row .btn.ghost{background:rgba(255,255,255,.14); color:#fff; border-color:rgba(255,255,255,.4)}
+  .final .tel{margin-top:22px; font-size:.85rem; color:#d6f0f5}
+  .final .tel b{font-family:var(--gara); font-size:1.6rem; color:#fff; display:block; letter-spacing:.04em}
+
+  footer{background:var(--navy); color:#9fb6c2; font-size:.78rem; padding:34px 0; text-align:center}
+  footer .logo{color:#fff; justify-content:center; margin-bottom:10px}
+  .disclaimer{font-size:.68rem; color:#6f8694; margin-top:14px; line-height:1.7; text-align:left}
+
+  .sticky{position:fixed; bottom:0; left:0; right:0; z-index:60; background:rgba(255,255,255,.97); border-top:1px solid var(--line); padding:10px 14px; backdrop-filter:blur(8px); display:flex; justify-content:center; gap:10px}
+  .sticky .btn{padding:13px 22px; font-size:.92rem}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="lp">
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="bar">
+      <a class="logo" href="#"><svg class="mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="11" fill="#1f9bb3"/><path d="M20 11c-3-2-7-1-7 3 0 5 3 7 4 12 .4 2 2 2 2.5 0 .3-1.3.5-3 .5-4s.2 2.7.5 4c.5 2 2.1 2 2.5 0 1-5 4-7 4-12 0-4-4-5-7-3z" fill="#fff"/></svg> あおぞら歯科</a>
+      <div class="right">
+        <span class="tel">03-0000-0000</span>
+        <a href="#reserve" class="hbtn">WEB予約</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="inner pad">
+      <div class="copy">
+        <span class="badge">🦷 〇〇駅 徒歩2分・土日も診療</span>
+        <h1><span class="em">痛み</span>に配慮する、<br><span class="u">通いやすい</span>歯医者さん。</h1>
+        <p class="sub">「歯医者は苦手」という方こそ。できるだけ痛みを抑える工夫と、土日・夜間も通える環境で、お口の健康を一緒に守ります。</p>
+        <div class="chips">
+          <span class="chip"><b>土日</b>診療</span>
+          <span class="chip">駅徒歩<b>2分</b></span>
+          <span class="chip"><b>24h</b>WEB予約</span>
+          <span class="chip">キッズ<b>スペース</b></span>
+        </div>
+        <div class="cta-row">
+          <a href="#reserve" class="btn cta">WEBで予約する<small>24時間受付・約60秒</small></a>
+          <a href="#feature" class="btn ghost">当院の特徴を見る</a>
+        </div>
+      </div>
+      <div class="heroimg reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=72" alt="清潔感のある歯科医院"></div>
+    </div>
+  </section>
+
+  <!-- 不安に寄り添う -->
+  <section class="sec worry pad">
+    <div class="headwrap c">
+      <span class="label">Worries<span class="ja">歯医者さんへの不安</span></span>
+      <h2 class="h2">こんな理由で、<br>足が遠のいていませんか。</h2>
+    </div>
+    <div class="cards">
+      <div class="wcard reveal"><div class="ic">😣</div><p>治療の「痛み」が怖い</p></div>
+      <div class="wcard reveal d1"><div class="ic">🕒</div><p>平日に通う時間がない</p></div>
+      <div class="wcard reveal"><div class="ic">💰</div><p>費用がいくらか不安</p></div>
+      <div class="wcard reveal d1"><div class="ic">👶</div><p>子どもを預けられない</p></div>
+    </div>
+    <p class="bridge reveal">その不安を一つずつ減らすことが、<br>私たちの役目だと考えています。</p>
+  </section>
+
+  <!-- 選ばれる理由 -->
+  <section class="sec feature pad" id="feature">
+    <div class="headwrap c">
+      <span class="label">Features<span class="ja">あおぞら歯科の特徴</span></span>
+      <h2 class="h2">通いやすさへの、こだわり。</h2>
+    </div>
+    <div class="grid">
+      <div class="fcard reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.7-7 10-7 10z"/></svg></div>
+        <div><div class="no">01</div><h3>痛みへの配慮</h3><p>表面麻酔と細い針、ゆっくりとした注入で、麻酔時のチクッとした痛みをできるだけ抑えるよう努めています。治療中の声かけも大切にしています。</p></div>
+      </div>
+      <div class="fcard reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><div class="no">02</div><h3>土日・夜間も診療</h3><p>平日お忙しい方のために、土日も診療。夜は19時まで対応しています。〇〇駅から徒歩2分で、お仕事帰りにも通いやすい立地です。</p></div>
+      </div>
+      <div class="fcard reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2M3 7h18v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M8 11h8M8 15h5"/></svg></div>
+        <div><div class="no">03</div><h3>事前の説明と費用の明示</h3><p>治療を始める前に、内容と費用をわかりやすくご説明します。ご納得いただいてから進めますので、「気づいたら高額に」ということはありません。</p></div>
+      </div>
+      <div class="fcard reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M16 8h5M18.5 5.5v5"/></svg></div>
+        <div><div class="no">04</div><h3>キッズスペース完備</h3><p>お子様連れでも安心して通っていただけるよう、キッズスペースをご用意。親子で一緒に通われる方も多くいらっしゃいます。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 診療案内 -->
+  <section class="sec menu pad">
+    <div class="headwrap c">
+      <span class="label">Menu<span class="ja">診療案内</span></span>
+      <h2 class="h2">診療内容</h2>
+    </div>
+    <div class="grid">
+      <div class="mcard reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.7-7 10-7 10z"/></svg></div><h4>一般歯科</h4><p>むし歯・歯周病の治療</p></div>
+      <div class="mcard reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 13s1.5 2 4 2 4-2 4-2"/></svg></div><h4>予防歯科</h4><p>クリーニング・定期検診</p></div>
+      <div class="mcard reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 9c0-3 6-3 6 0M5 20c0-5 3-9 7-9s7 4 7 9"/></svg></div><h4>小児歯科</h4><p>お子様の治療・フッ素塗布</p></div>
+      <div class="mcard reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l14 8M19 8L5 16"/></svg></div><h4>矯正歯科</h4><p>歯並びのご相談</p></div>
+      <div class="mcard reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6 6 .5-4.5 4 1.5 6L12 15l-5 3.5 1.5-6L4 8.5l6-.5z"/></svg></div><h4>ホワイトニング</h4><p>歯の見た目のご相談</p></div>
+      <div class="mcard reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></div><h4>入れ歯・その他</h4><p>各種ご相談に対応</p></div>
+    </div>
+  </section>
+
+  <!-- 院長メッセージ -->
+  <section class="sec doctor pad">
+    <div class="headwrap c">
+      <span class="label">Doctor<span class="ja">院長より</span></span>
+      <h2 class="h2">「怖くない歯医者」を、本気で。</h2>
+    </div>
+    <div class="card reveal">
+      <div class="pic"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=420&q=72" alt="清潔な診療室"></div>
+      <div>
+        <div class="role">院長</div>
+        <h3>青空 太郎（架空）</h3>
+        <p>「歯医者は痛い・怖い」というイメージを、少しでも変えたい。その一心で開業しました。患者さま一人ひとりのお話をよく聞き、なぜその治療が必要なのかを納得いただいた上で進めることを大切にしています。お口のことで気になることがあれば、どんな小さなことでもご相談ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 診療時間・アクセス -->
+  <section class="sec access pad">
+    <div class="headwrap c">
+      <span class="label">Access<span class="ja">診療時間・アクセス</span></span>
+      <h2 class="h2">診療時間・アクセス</h2>
+    </div>
+    <div class="box">
+      <div class="table reveal">
+        <h3>診療時間</h3>
+        <table>
+          <tr><th>時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
+          <tr><td>9:30–13:00</td><td class="o">●</td><td class="o">●</td><td>休</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td></tr>
+          <tr><td>14:30–19:00</td><td class="o">●</td><td class="o">●</td><td>休</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td>―</td></tr>
+        </table>
+        <p style="font-size:.76rem;color:var(--ink-soft);margin-top:10px">※ 水曜・祝日休診。土曜は18:00まで、日曜は午前のみ。</p>
+      </div>
+      <div class="info reveal d1">
+        <h3>クリニック情報</h3>
+        <dl>
+          <dt>住所</dt><dd>（架空）〇〇県〇〇市2-1-5 あおぞらビル2F</dd>
+          <dt>アクセス</dt><dd>〇〇線 〇〇駅 西口より徒歩2分</dd>
+          <dt>駐車場</dt><dd>提携駐車場あり（3台）</dd>
+          <dt>電話</dt><dd>03-0000-0000</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq pad">
+    <div class="headwrap c">
+      <span class="label">FAQ<span class="ja">よくあるご質問</span></span>
+      <h2 class="h2">よくあるご質問</h2>
+    </div>
+    <div style="margin-top:22px;max-width:680px;margin-left:auto;margin-right:auto">
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">治療は痛くないですか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>痛みの感じ方には個人差がありますが、表面麻酔や細い針を用いるなど、できるだけ痛みを抑える工夫に努めています。不安な点は遠慮なくお伝えください。</p></div></div>
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">予約なしでも受診できますか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>ご予約優先です。WEB予約は24時間受付しております。急な痛みなどお困りの際は、お電話でご相談ください。できる限り対応いたします。</p></div></div>
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">費用はどのくらいかかりますか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>保険診療が基本です。治療内容により異なりますので、治療前に内容と費用をご説明し、ご納得いただいてから進めます。</p></div></div>
+      <div class="qa reveal"><button aria-expanded="false"><span class="q">子どもと一緒に行けますか？</span><span class="plus">+</span></button>
+        <div class="ab"><p>はい。キッズスペースをご用意しています。親子でのご来院も歓迎しておりますので、お気軽にお越しください。</p></div></div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="final" id="reserve">
+    <div class="inner">
+      <span class="label">Reservation</span>
+      <h2 class="h2">まずは、お気軽に。</h2>
+      <p>WEB予約は24時間・約60秒で完了します。<br>気になる症状やご相談だけでも構いません。</p>
+      <div class="cta-row">
+        <a href="#" class="btn cta" onclick="alert('※ポートフォリオ用サンプルです。実際は予約システムに接続します。');return false;">WEBで予約する<small>24時間受付・約60秒</small></a>
+        <a href="#" class="btn ghost" onclick="alert('※ポートフォリオ用サンプルです。');return false;">電話で相談する</a>
+      </div>
+      <div class="tel">お電話でのご予約・ご相談<b>03-0000-0000</b></div>
+    </div>
+  </section>
+
+  <footer><div class="pad">
+    <div class="logo" style="color:#fff"><svg class="mark" viewBox="0 0 40 40" style="width:26px;height:26px"><rect width="40" height="40" rx="11" fill="#3a86c8"/><path d="M20 11c-3-2-7-1-7 3 0 5 3 7 4 12 .4 2 2 2 2.5 0 .3-1.3.5-3 .5-4s.2 2.7.5 4c.5 2 2.1 2 2.5 0 1-5 4-7 4-12 0-4-4-5-7-3z" fill="#fff"/></svg> あおぞら歯科クリニック</div>
+    <p>痛みに配慮する、通いやすい歯医者さん</p>
+    <p class="disclaimer">※本ページはポートフォリオ用の架空サンプルです。「あおぞら歯科クリニック」は実在しない架空の医院で、院名・ロゴ・医師名・診療時間・住所・電話番号・口コミはすべてダミーです。記載内容は一般的な情報であり、特定の効果や結果を保証するものではありません。掲載写真はUnsplashのフリー素材を使用しており、実在の医院・人物とは関係ありません。実在の企業・人物とは一切関係ありません。</p>
+  </div></footer>
+
+</div>
+
+<div class="sticky">
+  <a href="#reserve" class="btn cta">WEB予約</a>
+  <a href="#feature" class="btn ghost">特徴</a>
+</div>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  document.querySelectorAll('.qa button').forEach(function(b){
+    b.addEventListener('click',function(){var qa=b.parentElement,ab=qa.querySelector('.ab'),open=qa.getAttribute('aria-expanded')==='true';
+      qa.setAttribute('aria-expanded',String(!open)); ab.style.maxHeight=open?null:ab.scrollHeight+'px';});
+  });
+</script>
+</body>
+</html>

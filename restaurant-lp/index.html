@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORNO｜薪窯で焼く、本格ナポリピッツァ｜薪窯ピッツェリア・フォルノ</title>
+<meta name="description" content="450℃の薪窯で一気に焼き上げる、本格ナポリピッツァ。職人が手がける一枚と、寛げる空間を。ネット予約受付中。">
+<!--
+  ポートフォリオ用サンプルLP / 架空の飲食店「薪窯ピッツェリア FORNO」（来店予約型）
+  訴求(一点): 「薪窯で焼く、本格ナポリピッツァ」=看板体験を主役に。飲食は感性・写真・世界観で来店が決まる業態のため、シズルと世界観を支配的に、CTAはネット予約。
+  店名・メニュー・口コミ・住所はすべて架空のダミー。写真はUnsplashのフリー素材。制作: (実名)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2a211c; --ink-soft:#7d7064; --line:#e9e0d4;
+    --bg:#ffffff; --cream:#faf5ec; --beige:#f1e8d8; --char:#1c1612; --char-2:#120d0a;
+    --ember:#d2682a; --ember-d:#b8521c; --gold:#c9a24b; --olive:#6b6b43;
+    --radius:4px; --shadow-sm:0 10px 34px rgba(28,22,18,.12);
+    --shadow:0 30px 70px rgba(28,22,18,.26); --maxw:940px;
+    --mincho:"Shippori Mincho",serif; --gara:"Cormorant Garamond",serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+  body{font-family:"Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:var(--beige);
+    line-height:2.0; font-weight:400; -webkit-font-smoothing:antialiased; letter-spacing:.04em; overflow-x:hidden; padding-bottom:78px}
+  img{max-width:100%; display:block}
+  a{color:inherit; text-decoration:none}
+  .lp{max-width:var(--maxw); margin:0 auto; background:var(--bg); box-shadow:0 0 90px rgba(28,22,18,.16); overflow:hidden}
+  .pad{padding-left:28px; padding-right:28px}
+  @media(max-width:560px){.pad{padding-left:22px; padding-right:22px}}
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity 1s cubic-bezier(.2,.7,.3,1), transform 1s}
+  .reveal.in{opacity:1; transform:none}
+  .d1{transition-delay:.12s}.d2{transition-delay:.24s}
+
+  .label{font-family:var(--gara); font-style:italic; color:var(--ember-d); font-size:1.15rem; letter-spacing:.08em; display:inline-block}
+  .label .ja{display:block; font-family:var(--mincho); font-size:.74rem; color:var(--ink-soft); letter-spacing:.24em; margin-top:4px; font-style:normal}
+  .h2{font-family:var(--mincho); font-weight:700; color:var(--char); font-size:clamp(1.55rem,5.4vw,2.3rem); line-height:1.7; margin-top:14px; letter-spacing:.06em}
+  .lead{color:var(--ink-soft); margin-top:18px; font-size:.97rem; line-height:2.1}
+  .sec{padding:90px 0; position:relative}
+  @media(max-width:560px){.sec{padding:64px 0}}
+  .headwrap{max-width:640px}
+  .headwrap.c{margin:0 auto; text-align:center}
+
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; font-family:var(--mincho); font-weight:600;
+    border-radius:3px; padding:18px 34px; font-size:1.04rem; transition:.3s; border:none; cursor:pointer; line-height:1.3; letter-spacing:.08em}
+  .btn.solid{background:var(--ember); color:#fff; box-shadow:0 12px 28px rgba(210,104,42,.4)}
+  .btn.solid:hover{background:var(--ember-d); transform:translateY(-2px)}
+  .btn.outline{background:transparent; color:#fff; border:1px solid rgba(255,255,255,.6)}
+  .btn.outline:hover{background:#fff; color:var(--char)}
+  .btn small{display:block; font-size:.66rem; font-weight:400; opacity:.9; margin-top:2px; font-family:"Noto Sans JP"; letter-spacing:.04em}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap}
+
+  /* ヘッダー */
+  header{position:sticky; top:0; z-index:50; background:rgba(28,22,18,.86); backdrop-filter:blur(10px); border-bottom:1px solid rgba(255,255,255,.1)}
+  header .bar{display:flex; align-items:center; justify-content:space-between; padding:13px 28px}
+  .logo{display:flex; align-items:baseline; gap:10px; font-family:var(--gara); font-weight:600; color:#fff; font-size:1.45rem; letter-spacing:.18em}
+  .logo .ja{font-family:var(--mincho); font-size:.66rem; color:#cbb89a; letter-spacing:.2em}
+  header .hbtn{background:var(--ember); color:#fff; font-family:var(--mincho); font-weight:600; font-size:.82rem; padding:9px 18px; border-radius:3px; transition:.2s; letter-spacing:.05em}
+  header .hbtn:hover{background:var(--ember-d)}
+
+  /* ヒーロー：シズルと訴求 */
+  .hero{position:relative; min-height:94vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden}
+  .hero .bgimg{position:absolute; inset:0; z-index:0}
+  .hero .bgimg img{width:100%; height:100%; object-fit:cover}
+  .hero::after{content:""; position:absolute; inset:0; z-index:1; background:radial-gradient(120% 90% at 50% 40%,rgba(28,22,18,.3),rgba(18,13,10,.78) 90%)}
+  .hero .inner{position:relative; z-index:2; padding:40px 28px}
+  .hero .en{font-family:var(--gara); font-style:italic; font-size:1.2rem; letter-spacing:.16em; color:#f0c98a}
+  .hero h1{font-family:var(--mincho); font-weight:700; font-size:clamp(2.1rem,8vw,3.6rem); line-height:1.55; margin:14px 0; text-shadow:0 2px 30px rgba(10,6,4,.6); letter-spacing:.08em}
+  .hero h1 .em{color:#f0a45a}
+  .hero p.sub{font-size:1rem; color:#ece3d6; max-width:520px; margin:0 auto; text-shadow:0 1px 14px rgba(10,6,4,.6)}
+  .hero .cta-row{justify-content:center; margin-top:30px}
+  .hero .info{margin-top:22px; font-size:.78rem; color:#cbb89a; letter-spacing:.08em}
+
+  /* コンセプト */
+  .concept{background:var(--char); color:#f3ece0; text-align:center}
+  .concept .inner{max-width:620px; margin:0 auto}
+  .concept .label{color:#f0c98a}
+  .concept h2{font-family:var(--mincho); font-weight:600; color:#fff; font-size:clamp(1.4rem,5vw,2rem); line-height:2.2; margin:20px 0; letter-spacing:.08em}
+  .concept p{color:#d6cab8; font-size:.96rem; line-height:2.3}
+  .concept .imgrow{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:48px}
+  .concept .imgrow img{width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:3px}
+  @media(max-width:560px){.concept .imgrow{gap:8px}}
+
+  /* 看板メニュー */
+  .menu{background:var(--cream)}
+  .menu .item{display:grid; grid-template-columns:1fr 1fr; gap:42px; align-items:center; margin-top:64px}
+  .menu .item:first-of-type{margin-top:48px}
+  .menu .item:nth-child(even) .txt{order:2}
+  .menu .item img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:3px; box-shadow:var(--shadow-sm)}
+  .menu .item .en{font-family:var(--gara); font-style:italic; color:var(--ember-d); font-size:1.2rem}
+  .menu .item h3{font-family:var(--mincho); font-weight:700; color:var(--char); font-size:1.5rem; margin:4px 0 10px; letter-spacing:.04em}
+  .menu .item .price{font-family:var(--gara); font-weight:600; color:var(--ember-d); font-size:1.3rem; margin-bottom:10px}
+  .menu .item p{font-size:.92rem; color:var(--ink-soft); line-height:2.05}
+  @media(max-width:640px){
+    .menu .item{grid-template-columns:1fr; gap:18px; margin-top:48px}
+    .menu .item:nth-child(even) .txt{order:0}
+  }
+
+  /* こだわり3点 */
+  .point{background:#fff}
+  .point .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:50px}
+  .pcard{text-align:center}
+  .pcard .ic{width:60px; height:60px; margin:0 auto 16px; border-radius:50%; border:1px solid var(--ember); display:grid; place-items:center}
+  .pcard .ic svg{width:30px; height:30px; stroke:var(--ember-d); fill:none; stroke-width:1.5}
+  .pcard h4{font-family:var(--mincho); font-weight:700; color:var(--char); font-size:1.1rem; margin-bottom:8px}
+  .pcard p{font-size:.86rem; color:var(--ink-soft); line-height:1.9}
+  @media(max-width:640px){.point .grid{grid-template-columns:1fr; gap:30px}}
+
+  /* 空間 */
+  .space{position:relative; color:#fff; text-align:center; overflow:hidden}
+  .space .bgimg{position:absolute; inset:0; z-index:0}
+  .space .bgimg img{width:100%; height:100%; object-fit:cover}
+  .space::after{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(160deg,rgba(28,22,18,.7),rgba(18,13,10,.82))}
+  .space .inner{position:relative; z-index:2; padding:96px 28px}
+  .space .label{color:#f0c98a}
+  .space h2{font-family:var(--mincho); font-weight:600; color:#fff; font-size:clamp(1.4rem,5vw,2rem); line-height:2; margin:16px 0; letter-spacing:.08em}
+  .space p{color:#e0d6c6; max-width:520px; margin:0 auto; font-size:.95rem; line-height:2.1}
+
+  /* 声 */
+  .voice{background:var(--beige)}
+  .voice .grid{display:grid; gap:22px; margin-top:48px; max-width:700px; margin-left:auto; margin-right:auto}
+  .vcard{background:#fff; border-radius:4px; padding:26px; box-shadow:var(--shadow-sm)}
+  .vcard .stars{color:var(--gold); letter-spacing:2px; font-size:.9rem}
+  .vcard p{font-family:var(--mincho); font-size:1.02rem; color:var(--ink); line-height:2; margin-top:10px}
+  .vcard .who{margin-top:12px; font-size:.78rem; color:var(--ink-soft)}
+
+  /* アクセス/予約 */
+  .access{background:#fff}
+  .access .box{display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:48px; border:1px solid var(--line); border-radius:5px; overflow:hidden}
+  .access .pic{position:relative; min-height:280px}
+  .access .pic img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0}
+  .access .body{padding:38px 32px}
+  .access .body h3{font-family:var(--mincho); font-weight:700; color:var(--char); font-size:1.3rem; margin-bottom:18px; letter-spacing:.04em}
+  .access .body dl{display:grid; grid-template-columns:5em 1fr; gap:10px 14px; font-size:.9rem}
+  .access .body dt{color:var(--ember-d); font-family:var(--mincho); font-weight:600}
+  .access .body dd{color:var(--ink)}
+  @media(max-width:640px){.access .box{grid-template-columns:1fr} .access .pic{min-height:200px}}
+
+  /* 最終CTA */
+  .final{background:var(--char-2); color:#fff; text-align:center; position:relative; overflow:hidden}
+  .final::before{content:""; position:absolute; top:-30%; left:50%; transform:translateX(-50%); width:120%; height:90%; background:radial-gradient(closest-side,rgba(210,104,42,.3),transparent 70%)}
+  .final .inner{position:relative; z-index:1; padding:90px 28px}
+  .final .en{font-family:var(--gara); font-style:italic; color:#f0c98a; font-size:1.2rem; letter-spacing:.14em}
+  .final h2{font-family:var(--mincho); font-weight:700; font-size:clamp(1.6rem,5.4vw,2.3rem); margin:14px 0 16px; line-height:1.7; letter-spacing:.06em}
+  .final p{color:#d6cab8; margin-bottom:30px; font-size:.94rem}
+  .final .cta-row{justify-content:center}
+  .final .tel{margin-top:26px; font-size:.84rem; color:#cbb89a}
+  .final .tel b{font-family:var(--gara); font-size:1.6rem; color:#fff; display:block; letter-spacing:.06em}
+
+  footer{background:#0d0a08; color:#9a8c78; font-size:.78rem; padding:38px 0; text-align:center}
+  footer .logo{justify-content:center; margin-bottom:10px; font-size:1.3rem}
+  .disclaimer{font-size:.68rem; color:#6b6052; margin-top:14px; line-height:1.8; text-align:left}
+
+  .sticky{position:fixed; bottom:0; left:0; right:0; z-index:60; background:rgba(28,22,18,.96); padding:11px 16px; backdrop-filter:blur(8px); display:flex; justify-content:center; gap:12px; border-top:1px solid rgba(255,255,255,.1)}
+  .sticky .btn{padding:13px 26px; font-size:.94rem}
+  .sticky .btn.outline{color:#fff; border-color:rgba(255,255,255,.5)}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="lp">
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="bar">
+      <a class="logo" href="#">FORNO <span class="ja">薪窯ピッツェリア</span></a>
+      <a href="#reserve" class="hbtn">ご予約</a>
+    </div>
+  </header>
+
+  <!-- ヒーロー：訴求＝薪窯ナポリピッツァ -->
+  <section class="hero">
+    <div class="bgimg"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=72" alt="薪窯で焼いた本格ナポリピッツァ"></div>
+    <div class="inner">
+      <span class="en">Pizzeria FORNO</span>
+      <h1>薪窯で焼く、<br><span class="em">本格ナポリピッツァ</span>。</h1>
+      <p class="sub">450℃の薪窯で、わずか90秒。外はパリッ、中はもっちり。<br>職人が一枚ずつ焼き上げる、本場の味を。</p>
+      <div class="cta-row">
+        <a href="#reserve" class="btn solid">ネットで席を予約する<small>24時間OK・前日まで</small></a>
+        <a href="#menu" class="btn outline">メニューを見る</a>
+      </div>
+      <p class="info">ランチ 11:30–14:30 ／ ディナー 17:30–22:00 ／ 月曜定休</p>
+    </div>
+  </section>
+
+  <!-- コンセプト -->
+  <section class="sec concept pad">
+    <div class="inner">
+      <span class="label">Concept<span class="ja">フォルノのこだわり</span></span>
+      <h2>一枚のピッツァに、<br>イタリアの火を。</h2>
+      <p>本場ナポリから取り寄せた薪窯。高温で一気に焼くことで、生地の水分を閉じ込め、香ばしくも、ふっくらと。粉・水・塩・酵母だけのシンプルな生地を、48時間かけてじっくり発酵させています。</p>
+    </div>
+    <div class="imgrow pad reveal" style="padding:0;margin:48px 28px 0">
+      <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?auto=format&fit=crop&w=400&q=72" alt="薪窯">
+      <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=72" alt="焼き上がりのピッツァ">
+      <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=400&q=72" alt="生地づくり">
+    </div>
+  </section>
+
+  <!-- 看板メニュー -->
+  <section class="sec menu pad" id="menu">
+    <div class="headwrap c">
+      <span class="label">Signature<span class="ja">看板メニュー</span></span>
+      <h2 class="h2">名物の、三枚。</h2>
+    </div>
+    <div class="item reveal">
+      <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=560&q=72" alt="マルゲリータ">
+      <div class="txt"><div class="en">Margherita</div><h3>マルゲリータ</h3><div class="price">¥1,680</div><p>水牛モッツァレラ、完熟トマト、バジル。素材の味がそのまま伝わる、王道の一枚。まずはこれを。</p></div>
+    </div>
+    <div class="item reveal">
+      <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=560&q=72" alt="クアトロフォルマッジ">
+      <div class="txt"><div class="en">Quattro Formaggi</div><h3>クアトロフォルマッジ</h3><div class="price">¥1,980</div><p>4種のチーズをたっぷりと。仕上げのはちみつで、甘じょっぱさがクセになります。</p></div>
+    </div>
+    <div class="item reveal">
+      <img src="https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&w=560&q=72" alt="ビアンカ">
+      <div class="txt"><div class="en">Bianca</div><h3>生ハムとルッコラの白ピッツァ</h3><div class="price">¥2,180</div><p>トマトを使わない白ピッツァに、焼きたての熱で生ハムをのせて。ワインと相性抜群です。</p></div>
+    </div>
+  </section>
+
+  <!-- こだわり3点 -->
+  <section class="sec point pad">
+    <div class="headwrap c">
+      <span class="label">Quality<span class="ja">三つの約束</span></span>
+      <h2 class="h2">おいしさの理由。</h2>
+    </div>
+    <div class="grid">
+      <div class="pcard reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2c1 3-1 4-1 6a3 3 0 0 0 6 0c0-1 0-2-1-3 2 1 4 4 4 8a8 8 0 0 1-16 0c0-4 3-7 4-8 0 2 1 3 2 3"/></svg></div>
+        <h4>本場ナポリの薪窯</h4><p>450℃の薪窯で一気に焼成。薪の香りをまとった、本場の焼き上がり。</p>
+      </div>
+      <div class="pcard reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8c0 4 3 5 7 5M19 8c0 4-3 5-7 5"/></svg></div>
+        <h4>48時間発酵の生地</h4><p>粉・水・塩・酵母だけ。じっくり発酵させた、消化にやさしい生地。</p>
+      </div>
+      <div class="pcard reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 13s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+        <h4>厳選した素材</h4><p>イタリア産チーズ、契約農家の野菜。素材から、おいしさを。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 空間 -->
+  <section class="space">
+    <div class="bgimg"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=72" alt="温かみのある店内"></div>
+    <div class="inner">
+      <span class="label">Atmosphere</span>
+      <h2>火を囲む、<br>あたたかな時間を。</h2>
+      <p>薪窯の灯りがゆれる店内で、気のおけない人と。記念日にも、ふらりと一人でも。あなたのための一席を、ご用意します。</p>
+    </div>
+  </section>
+
+  <!-- 声 -->
+  <section class="sec voice pad">
+    <div class="headwrap c">
+      <span class="label">Voice<span class="ja">お客様の声</span></span>
+      <h2 class="h2">また来たくなる、と。</h2>
+    </div>
+    <div class="grid">
+      <div class="vcard reveal">
+        <div class="stars">★★★★★</div>
+        <p>「生地が本当においしい。薪窯の香りがして、ナポリで食べたあの味を思い出しました。記念日に使って大正解でした。」</p>
+        <div class="who">― 30代・ご夫婦でご来店</div>
+      </div>
+      <div class="vcard reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>「一人でもふらっと入りやすい雰囲気。カウンターで焼く様子を眺めながらの一枚は格別です。近所にあって幸せ。」</p>
+        <div class="who">― 40代・おひとりで常連</div>
+      </div>
+    </div>
+    <p class="disclaimer" style="text-align:center;color:var(--ink-soft);font-size:.74rem;margin-top:18px">※ 感想の一例です。</p>
+  </section>
+
+  <!-- アクセス -->
+  <section class="sec access pad">
+    <div class="headwrap c">
+      <span class="label">Access<span class="ja">店舗情報</span></span>
+      <h2 class="h2">お店について</h2>
+    </div>
+    <div class="box reveal">
+      <div class="pic"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=72" alt="店舗の外観"></div>
+      <div class="body">
+        <h3>薪窯ピッツェリア FORNO</h3>
+        <dl>
+          <dt>住所</dt><dd>（架空）〇〇県〇〇市1-2-3</dd>
+          <dt>営業</dt><dd>ランチ 11:30–14:30／ディナー 17:30–22:00</dd>
+          <dt>定休</dt><dd>月曜日</dd>
+          <dt>席数</dt><dd>テーブル20席／カウンター6席</dd>
+          <dt>その他</dt><dd>個室あり・お子様連れ歓迎・ペット不可</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="final" id="reserve">
+    <div class="inner">
+      <span class="en">Reservation</span>
+      <h2>焼きたての一枚を、<br>あなたのテーブルへ。</h2>
+      <p>席のご予約はネットで24時間受付。<br>前日までのご予約がおすすめです。</p>
+      <div class="cta-row">
+        <a href="#" class="btn solid" onclick="alert('※ポートフォリオ用サンプルです。実際は予約システム（ぐるなび/食べログ等）に接続します。');return false;">ネットで席を予約する<small>24時間OK</small></a>
+        <a href="#" class="btn outline" onclick="alert('※ポートフォリオ用サンプルです。');return false;">地図・アクセス</a>
+      </div>
+      <div class="tel">お電話でのご予約<b>03-0000-0000</b></div>
+    </div>
+  </section>
+
+  <footer><div class="pad">
+    <div class="logo">FORNO</div>
+    <p style="color:#cbb89a;font-family:var(--gara);letter-spacing:.1em">Pizzeria · since 20XX</p>
+    <p class="disclaimer">※本ページはポートフォリオ用の架空サンプルです。「FORNO」は実在しない架空の店舗で、店名・ロゴ・メニュー・価格・口コミ・住所・電話番号はすべてダミーです。掲載写真はUnsplashのフリー素材を使用しており、実在の店舗・料理とは関係ありません。実在の企業・人物とは一切関係ありません。</p>
+  </div></footer>
+
+</div>
+
+<div class="sticky">
+  <a href="#reserve" class="btn solid">ネット予約</a>
+  <a href="#menu" class="btn outline">メニュー</a>
+</div>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
