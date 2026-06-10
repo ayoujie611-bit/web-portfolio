@@ -3,626 +3,547 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lumière｜うるおいで満たすオールインワン美容液</title>
-<meta name="description" content="忙しい毎日に、これ1本。乾燥・ハリ不足・くすみにアプローチするオールインワン美容液 Lumière。初回特別価格でお試し受付中。">
-<!--
-  ポートフォリオ用サンプルLP / 架空のコスメ「Lumière」オールインワン美容液
-  スタイル: 写真多め・装飾リッチな美容/物販系LP（締め色ボルドー＋ゴールドで高級感／CSS製ボトル／信頼バッジ帯／成分浸透断面図／実感グラフ／限定オファー）
-  商品ボトルはCSS/SVG製（実ブランドの写り込み回避）。背景・小物・人物写真はUnsplashのフリー素材に共通の暖色トーン処理で統一。商品・口コミ・数値・受賞は架空のダミー。制作: (実名)
--->
+<title>Lumière｜寝かしつけたあとの私に、60秒だけのごほうびを。1本5役のオールインワン美容液</title>
+<meta name="description" content="化粧水・乳液・美容液・クリーム・パックをこれ1本に。おやすみ前の60秒で、うるおいを角層のすみずみまで。初回限定50%OFF・回数縛りなし・25日間全額返金保証。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&family=Shippori+Mincho:wght@600;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preload" as="image" fetchpriority="high"
+  imagesrcset="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=480&q=60 480w, https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=780&q=60 780w, https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=1080&q=60 1080w"
+  imagesizes="(max-width:560px) 100vw, 560px">
 <style>
-  :root{
-    --ink:#4a3a3e; --ink-soft:#897a7d; --line:#efe2e4;
-    --bg:#ffffff; --cream:#fdf6f3; --pink-bg:#fbecef; --blue-bg:#eef4f8;
-    --rose:#d96e8a; --rose-d:#bf546f; --mauve:#9c6a74; --mauve-d:#7e5560;
-    --wine:#6e2740; --wine-d:#551d31;                 /* 締め色 */
-    --cta:#e23e6d; --cta-d:#c92c59;
-    --gold:#c2a062; --gold-d:#a9863f; --gold-l:#e7d3a6; /* ゴールド系 */
-    --radius:18px; --shadow-sm:0 6px 22px rgba(110,39,64,.10);
-    --shadow:0 22px 54px rgba(110,39,64,.22); --maxw:760px;
-    --mincho:"Shippori Mincho",serif; --maru:"Zen Maru Gothic","Noto Sans JP",sans-serif;
-    --garamond:"Cormorant Garamond",serif;
-  }
-  *{box-sizing:border-box; margin:0; padding:0}
-  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
-  body{font-family:"Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:#f3e9e6;
-    line-height:1.9; -webkit-font-smoothing:antialiased; letter-spacing:.02em; overflow-x:hidden}
-  /* ★ ビジュアル統一：全写真に共通の暖色トーン処理 */
-  img{max-width:100%; display:block; filter:saturate(1.06) contrast(.98) brightness(1.02) sepia(.04)}
-  a{color:inherit; text-decoration:none}
-  .lp{max-width:var(--maxw); margin:0 auto; background:var(--bg); box-shadow:0 0 80px rgba(110,39,64,.18); overflow:hidden}
-  .pad{padding-left:22px; padding-right:22px}
-  .center{text-align:center}
-  .mk{background:linear-gradient(transparent 56%, var(--gold-l) 56%); font-weight:900}
-  .rose{color:var(--rose)} .gold{color:var(--gold-d)} .big{font-size:1.6em}
+:root{
+  --bg:#FAF7F2; --bg2:#F3ECE2; --white:#FFFFFF;
+  --ink:#41362E; --ink-soft:#6B5D51; --mocha:#A88B73; --line:#E6DCCF;
+  --coral:#D96E5F; --coral-deep:#C75D4E; --gold:#B79B6C;
+  --serif-jp:"Zen Old Mincho","Hiragino Mincho ProN",serif;
+  --serif-en:"Cormorant Garamond",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:2;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
 
-  .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s}
-  .reveal.in{opacity:1; transform:none}
-  .d1{transition-delay:.08s}.d2{transition-delay:.16s}
+/* ===== layout ===== */
+.page{max-width:560px;margin:0 auto;background:var(--bg);position:relative;box-shadow:0 0 60px rgba(65,54,46,.07)}
+@media(min-width:561px){ body{background:#F1EAE0} }
+section{padding:72px 24px;position:relative}
+.full{padding-left:0;padding-right:0}
+.inner{padding-left:24px;padding-right:24px}
 
-  /* ===== 見出し体系（英字サブ＋ゴールド装飾で高級感） ===== */
-  .eyebrow{font-family:var(--garamond); font-style:italic; font-weight:600; color:var(--gold-d);
-    font-size:1.05rem; letter-spacing:.06em; display:block; margin-bottom:2px}
-  .rule{display:flex; align-items:center; justify-content:center; gap:10px; margin:10px auto 0; color:var(--gold)}
-  .rule::before,.rule::after{content:""; height:1px; width:46px; background:linear-gradient(90deg,transparent,var(--gold))}
-  .rule::after{background:linear-gradient(90deg,var(--gold),transparent)}
-  .rule span{font-size:.7rem; transform:rotate(45deg); display:inline-block}
+/* ===== type ===== */
+.eyebrow{font-family:var(--serif-en);font-style:italic;font-size:13px;letter-spacing:.22em;color:#7D6347;text-transform:uppercase;text-align:center;margin-bottom:14px}
+.eyebrow::after{content:"";display:block;width:28px;height:1px;background:var(--gold);margin:12px auto 0}
+h1,h2{font-family:var(--serif-jp);font-weight:700;line-height:1.7;letter-spacing:.04em}
+h2{font-size:clamp(19px,5.4vw,24px);text-align:center;margin-bottom:28px;letter-spacing:.03em}
+h2 .accent{color:var(--coral)}
+p{margin-bottom:16px}
+.lead{color:var(--ink-soft)}
+.note{font-size:11px;color:#6E6150;line-height:1.7}
 
-  /* リボン見出し */
-  .ribbon{display:table; margin:0 auto; position:relative; background:var(--rose); color:#fff;
-    font-family:var(--maru); font-weight:900; font-size:clamp(1.1rem,4.4vw,1.45rem); padding:12px 34px; border-radius:8px;
-    box-shadow:0 8px 18px rgba(217,110,138,.3)}
-  .ribbon::before,.ribbon::after{content:""; position:absolute; top:50%; width:16px; height:16px; background:var(--rose-d);
-    transform:translateY(-50%) rotate(45deg)}
-  .ribbon::before{left:-7px} .ribbon::after{right:-7px}
-  .ribbon .small{display:block; font-size:.6em; font-weight:700; opacity:.92; letter-spacing:.1em; margin-bottom:2px}
-  /* きらめき見出し */
-  .spark{font-family:var(--mincho); text-align:center; font-size:clamp(1.5rem,5.6vw,2.05rem); font-weight:800; line-height:1.5; color:var(--wine); position:relative; display:inline-block}
-  .spark .em{color:var(--rose)}
-  .spark::before,.spark::after{content:"✦"; color:var(--gold); font-size:.6em; position:absolute; top:.1em}
-  .spark::before{left:-1.2em} .spark::after{right:-1.2em}
-  .headwrap{text-align:center}
-  /* スタンプ */
-  .stamp{width:92px; height:92px; border-radius:50%; background:#fff; color:var(--cta); border:2px dashed var(--cta);
-    display:grid; place-items:center; text-align:center; font-family:var(--maru); font-weight:900; font-size:.72rem; line-height:1.25;
-    box-shadow:var(--shadow-sm); transform:rotate(-11deg)}
-  .stamp b{font-size:1.7em; display:block; color:var(--cta)}
-  /* 手書き風の曲がり矢印 */
-  .harrow{display:block; margin:14px auto; width:46px; height:36px}
-  .harrow path{fill:none; stroke:var(--rose); stroke-width:3.4; stroke-linecap:round}
-  /* 波形セクション区切り */
-  .wave{display:block; width:100%; height:42px; margin-bottom:-1px}
-  .wave.flip{transform:rotate(180deg)}
+/* ===== header ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif-en);font-size:21px;letter-spacing:.18em;font-weight:600}
+.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;color:#7D6347;font-style:normal}
+.head-cta{font-size:12px;font-weight:700;background:#B44A3B;color:#fff;text-decoration:none;padding:9px 16px;border-radius:99px;letter-spacing:.05em}
 
-  /* CTAボタン */
-  .btn{display:inline-flex; flex-direction:column; align-items:center; gap:3px; background:linear-gradient(180deg,#ef5a82,var(--cta));
-    color:#fff; font-weight:900; border-radius:999px; padding:19px 40px; font-size:1.2rem; line-height:1.3;
-    box-shadow:0 12px 26px rgba(226,62,109,.42); transition:.25s; position:relative; border:none; cursor:pointer; font-family:var(--maru)}
-  .btn .s{font-size:.74rem; font-weight:600; opacity:.95}
-  .btn::after{content:"≫"; position:absolute; right:22px; top:50%; transform:translateY(-50%); font-size:.9rem}
-  .btn::before{content:""; position:absolute; inset:0; border-radius:999px; padding:1.5px; background:linear-gradient(180deg,var(--gold-l),transparent);
-    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none}
-  .btn:hover{transform:translateY(-3px); box-shadow:0 18px 34px rgba(226,62,109,.5)}
-  .btn.pulse{animation:pulse 2.2s ease-in-out infinite}
-  @keyframes pulse{0%,100%{box-shadow:0 12px 26px rgba(226,62,109,.42)}50%{box-shadow:0 12px 26px rgba(226,62,109,.42),0 0 0 12px rgba(226,62,109,.12)}}
-  .btn-wrap{display:flex; justify-content:center; padding:8px 0}
-  .btn-sub{text-align:center; font-size:.74rem; color:var(--ink-soft); margin-top:10px}
+/* ===== hero ===== */
+.hero{padding:0 0 64px}
+.hero-visual{position:relative;overflow:hidden}
+.hero-visual img{width:100%;aspect-ratio:4/5;object-fit:cover;transform:scale(1);}
+@media(min-width:480px){ .hero-visual img{aspect-ratio:1/1} }
+.hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,247,242,0) 55%,var(--bg) 98%)}
+.hero-eyebrow{position:absolute;top:22px;left:0;right:0;text-align:center;z-index:2;font-size:11.5px;letter-spacing:.14em;color:#fff;background:rgba(65,54,46,.45);backdrop-filter:blur(3px);width:fit-content;margin:0 auto;padding:6px 18px;border-radius:99px}
+.hero-body{margin-top:-72px;position:relative;z-index:2;padding:0 24px;text-align:center}
+.hero h1{font-size:clamp(22px,6.4vw,30px);line-height:1.85;letter-spacing:.03em}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{display:inline-block}
+.hero-sub{margin-top:20px;text-align:left;color:var(--ink-soft);font-size:14px}
+.badges{display:flex;gap:10px;margin:26px 0 0}
+.badge{flex:1;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:12px 4px;text-align:center;font-size:10.5px;color:var(--ink-soft);line-height:1.5}
+.badge b{display:block;font-family:var(--serif-en);font-size:22px;font-weight:600;color:var(--ink);line-height:1.3;margin-top:2px}
+.badge b small{font-size:11px;font-family:var(--sans)}
 
-  .sec{padding:60px 0; position:relative}
+/* offer card */
+.offer{background:var(--white);border:1px solid var(--gold);border-radius:12px;padding:24px 20px 20px;margin:24px 0 0;text-align:center;position:relative}
+.offer-label{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:11px;letter-spacing:.18em;padding:4px 18px;border-radius:99px;white-space:nowrap}
+.offer .was{font-size:13px;color:#6E6150;text-decoration:line-through}
+.offer .now{font-family:var(--serif-en);font-size:46px;font-weight:600;color:var(--coral);line-height:1.1;letter-spacing:.02em}
+.offer .now .yen{font-size:20px;font-family:var(--serif-jp)}
+.offer .now .off{font-size:15px;font-family:var(--serif-jp);color:var(--ink);margin-left:6px}
+.offer-terms{font-size:11.5px;color:var(--ink-soft);margin-top:6px}
+.cta{display:block;background:linear-gradient(180deg,var(--coral),var(--coral-deep));color:#fff;text-align:center;text-decoration:none;font-size:17px;font-weight:700;letter-spacing:.08em;padding:18px;border-radius:99px;margin:22px 0 10px;box-shadow:0 8px 22px rgba(217,110,95,.35);transition:transform .25s ease,box-shadow .25s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(217,110,95,.45)}
+.cta small{display:block;font-size:10.5px;font-weight:400;letter-spacing:.12em;opacity:.85;margin-top:2px}
+.micro{font-size:11px;color:#6E6150;text-align:center}
 
-  /* ① ヒーロー */
-  .hero{position:relative; color:#fff; text-align:center; overflow:hidden}
-  .hero .bgimg{position:absolute; inset:0; z-index:0}
-  .hero .bgimg img{width:100%; height:100%; object-fit:cover; filter:saturate(1.02) brightness(.92) sepia(.06)}
-  .hero::before{content:""; position:absolute; inset:0; z-index:1;
-    background:radial-gradient(120% 80% at 50% 0%,rgba(110,39,64,.35),rgba(85,29,49,.82) 80%)}
-  .hero::after{content:""; position:absolute; left:0; right:0; bottom:0; height:120px; z-index:1;
-    background:linear-gradient(180deg,transparent,rgba(85,29,49,.9))}
-  .hero .inner{position:relative; z-index:2; padding:30px 22px 36px}
-  .hero .firstbadge{display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.95); color:var(--wine);
-    font-family:var(--maru); font-weight:900; font-size:.82rem; padding:7px 18px; border-radius:999px; box-shadow:var(--shadow-sm);
-    border:1px solid var(--gold-l)}
-  .hero .firstbadge .ic{color:var(--gold-d)}
-  .hero h1{font-family:var(--mincho); font-size:clamp(1.75rem,6.6vw,2.6rem); font-weight:800; line-height:1.5; margin:16px 0 6px; text-shadow:0 2px 18px rgba(60,20,35,.5)}
-  .hero h1 .y{color:#ffe6a3; font-style:normal}
-  .hero .lead{font-size:.86rem; opacity:.95; margin-bottom:8px}
-  .hero .feats{display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-top:18px}
-  .hero .feat{background:rgba(255,255,255,.14); border:1px solid rgba(231,211,166,.55); border-radius:999px; padding:7px 15px; font-size:.8rem; font-weight:700; backdrop-filter:blur(3px)}
-  .hero .feat .ic{color:var(--gold-l)}
-  .hero .tests{margin-top:14px; font-size:.72rem; opacity:.85}
+/* ===== trust band ===== */
+.trust{padding:26px 12px;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:0}
+.trust div{flex:1;text-align:center;font-size:9.5px;color:var(--ink-soft);line-height:1.6;padding:0 6px}
+.trust div+div{border-left:1px solid var(--line)}
+.trust b{display:block;font-family:var(--serif-jp);font-size:12.5px;color:var(--ink);letter-spacing:0}
 
-  /* CSS製 美容液ボトル */
-  .bottle-wrap{position:relative; width:min(50%,210px); margin:8px auto 4px; filter:drop-shadow(0 22px 30px rgba(40,15,28,.55))}
-  .bottle-wrap svg{width:100%; height:auto; display:block}
-  .bottle-wrap .stamp{position:absolute; right:-10px; bottom:6px; background:#fff}
-  .bottle-glow{position:absolute; left:50%; top:54%; width:150%; height:60%; transform:translate(-50%,-50%);
-    background:radial-gradient(closest-side,rgba(255,210,225,.5),transparent 70%); z-index:-1}
+/* ===== sec3 checklist ===== */
+.sec-nayami{background:var(--bg2)}
+.check{list-style:none;margin:8px 0 30px}
+.check li{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:14px 16px 14px 46px;margin-bottom:10px;font-size:13.5px;line-height:1.8;position:relative;color:var(--ink-soft)}
+.check li::before{content:"✓";position:absolute;left:16px;top:13px;width:20px;height:20px;border-radius:50%;background:var(--coral);color:#fff;font-size:12px;line-height:20px;text-align:center}
+.turn{font-family:var(--serif-jp);font-size:22px;font-weight:700;text-align:center;line-height:2}
+.turn em{font-style:normal;background:linear-gradient(transparent 68%,rgba(217,110,95,.28) 68%)}
 
-  /* 信頼バッジ帯 */
-  .trust{background:linear-gradient(180deg,#fff,var(--cream)); padding:22px 14px 24px; border-bottom:1px solid var(--line)}
-  .trust .lead{text-align:center; font-size:.74rem; color:var(--ink-soft); letter-spacing:.08em; margin-bottom:14px}
-  .medals{display:flex; justify-content:center; gap:10px; flex-wrap:wrap}
-  .medal{width:104px; background:#fff; border:1px solid var(--gold-l); border-radius:14px; padding:12px 8px; text-align:center; box-shadow:var(--shadow-sm); position:relative}
-  .medal .laurel{font-family:var(--garamond); font-weight:600; color:var(--gold-d); font-size:.66rem; letter-spacing:.08em}
-  .medal .no{font-family:var(--mincho); font-weight:800; color:var(--wine); line-height:1; margin:3px 0}
-  .medal .no b{font-size:1.7rem; color:var(--cta)}
-  .medal .cap{font-size:.62rem; color:var(--ink-soft); line-height:1.4}
-  .medal .crown{position:absolute; top:-9px; left:50%; transform:translateX(-50%); font-size:.9rem}
+/* ===== sec4 cause / graph ===== */
+.graph{margin:28px 0 8px}
+.graph-row{margin-bottom:18px}
+.graph-row .glabel{font-size:12px;color:var(--ink-soft);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
+.graph-row .glabel b{font-family:var(--serif-jp);font-size:14px;color:var(--ink)}
+.gbar{height:30px;border-radius:6px;background:var(--mocha);width:100%;transform-origin:left center}
+.gbar.lum{background:var(--coral);width:15%;min-width:64px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;white-space:nowrap;padding:0 8px}
+.gnote{font-size:11px;color:#6E6150;text-align:right}
+.conclude{font-family:var(--serif-jp);font-size:17px;font-weight:700;text-align:center;margin-top:26px;line-height:2.1}
 
-  /* 価格ボックス */
-  .pricebox{background:linear-gradient(180deg,#fff,var(--pink-bg)); border:2px solid var(--gold); border-radius:20px;
-    margin:24px 16px 0; padding:30px 22px 26px; text-align:center; position:relative; box-shadow:var(--shadow)}
-  .pricebox .corner{position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:linear-gradient(180deg,var(--wine),var(--wine-d)); color:#fff;
-    font-family:var(--maru); font-weight:900; font-size:.9rem; padding:8px 24px; border-radius:999px; white-space:nowrap; box-shadow:0 6px 16px rgba(110,39,64,.4); border:1px solid var(--gold-l)}
-  .pricebox .normal{color:var(--ink-soft); font-size:.95rem; margin-top:8px} .pricebox .normal s{color:#b89aa0}
-  .pricebox .off{display:inline-block; background:var(--cta); color:#fff; font-family:var(--maru); font-weight:900; font-size:.78rem; padding:2px 10px; border-radius:6px; margin-left:4px; vertical-align:middle}
-  .pricebox .now{font-family:var(--mincho); color:var(--cta); font-weight:800; line-height:1; margin:8px 0 4px; display:flex; align-items:baseline; justify-content:center; gap:2px}
-  .pricebox .now .lab{font-size:1rem; color:var(--wine); font-weight:800; margin-right:4px}
-  .pricebox .now .num{font-size:4.4rem; letter-spacing:-.02em} .pricebox .now .yen{font-size:1.4rem} .pricebox .now .tax{font-size:.82rem; color:var(--ink-soft); align-self:flex-end; margin-left:2px}
-  .pricebox .free{display:inline-block; background:#fff6df; color:var(--gold-d); font-weight:800; font-size:.85rem; padding:6px 14px; border-radius:8px; border:1px solid var(--gold-l)}
-  .pricebox .conds{display:flex; gap:8px; justify-content:center; margin-top:14px; flex-wrap:wrap}
-  .pricebox .cond{background:#fff; border:1px solid var(--line); border-radius:8px; padding:6px 12px; font-size:.76rem; font-weight:700; color:var(--mauve)}
-  .pricebox .cond::before{content:"✓ "; color:var(--mint,#69b89f); font-weight:900}
+/* ===== sec5 solution ===== */
+.sec-solution{background:var(--white);padding-bottom:80px}
+.product-visual{margin:0 -24px 30px;overflow:hidden}
+.product-visual img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.tech-name{font-family:var(--serif-jp);text-align:center;font-size:20px;font-weight:700;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:16px 0;margin:26px 0;letter-spacing:.1em}
+.tech-name small{display:block;font-family:var(--serif-en);font-style:italic;font-size:11px;letter-spacing:.25em;color:var(--gold);margin-bottom:4px}
+.tech-name sup{font-size:10px}
 
-  /* 限定オファー枠 */
-  .limited{margin:14px 16px 0; background:linear-gradient(180deg,#fff,#fff7f3); border:1px dashed var(--cta); border-radius:14px; padding:14px 16px; text-align:center}
-  .limited .lh{font-family:var(--maru); font-weight:900; color:var(--cta); font-size:.92rem; display:flex; align-items:center; justify-content:center; gap:6px}
-  .countdown{display:flex; justify-content:center; gap:8px; margin:10px 0 8px}
-  .countdown .u{background:var(--wine); color:#fff; border-radius:8px; padding:6px 0; min-width:54px; font-family:var(--mincho); font-weight:800}
-  .countdown .u .n{font-size:1.5rem; line-height:1} .countdown .u .l{font-size:.58rem; opacity:.8; display:block; font-family:var(--maru)}
-  .countdown .sep{align-self:center; color:var(--wine); font-weight:800}
-  .stockbar{height:12px; background:#f0dfe3; border-radius:999px; overflow:hidden; margin-top:6px}
-  .stockbar .f{height:100%; width:18%; background:linear-gradient(90deg,#ef5a82,var(--cta)); border-radius:999px}
-  .limited .stocktxt{font-size:.74rem; color:var(--ink-soft); margin-top:6px}
-  .limited .stocktxt b{color:var(--cta); font-weight:900}
+/* ===== sec6 ingredients ===== */
+.ing-table{width:100%;border-collapse:collapse;margin:24px 0 10px;font-size:13px}
+.ing-table th,.ing-table td{border-bottom:1px solid var(--line);padding:14px 8px;text-align:left;vertical-align:top;line-height:1.7}
+.ing-table th{width:42%;font-family:var(--serif-jp);font-size:13.5px;font-weight:700}
+.ing-table th small{display:block;font-weight:400;font-size:10.5px;color:var(--mocha)}
+.ing-table td{color:var(--ink-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px 0 8px}
+.chip{font-size:11.5px;border:1px solid var(--mocha);color:var(--ink-soft);border-radius:99px;padding:5px 13px;background:var(--white)}
+.ing-visual{margin:26px -24px 0;overflow:hidden}
+.ing-visual img{width:100%;aspect-ratio:16/9;object-fit:cover}
 
-  /* 共通の写真フレーム */
-  .framed{border-radius:16px; box-shadow:var(--shadow-sm); border:4px solid #fff; outline:1px solid var(--gold-l)}
+/* ===== sec7 objections (dark) ===== */
+.sec-dark{background:#43372E;color:#F4EDE3}
+.sec-dark .eyebrow{color:#C9AE8C}
+.sec-dark h2{color:#FCF7EF}
+.sec-dark .lead{color:#D8CCBC}
+.qa{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px;margin-bottom:14px}
+.qa .q{font-family:var(--serif-jp);font-weight:700;font-size:15.5px;color:#F3D9B8;margin-bottom:8px}
+.qa .a{font-size:13.5px;color:#E9DFD2;line-height:1.95;margin:0}
+.sec-dark .closer{font-family:var(--serif-jp);font-size:16px;text-align:center;margin-top:26px;line-height:2.1}
+.sec-dark .closer em{font-style:normal;border-bottom:1px solid #C9AE8C;padding-bottom:2px}
+.sec-dark .note{color:#A99A88}
 
-  /* ② 共感 */
-  .worry{background:var(--pink-bg)}
-  .worry .model{margin:22px auto 0; width:100%}
-  .bubbles{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:22px}
-  .bub{background:#fff; border-radius:14px; padding:14px 16px; font-size:.9rem; font-weight:700; color:var(--mauve-d); box-shadow:var(--shadow-sm); position:relative}
-  .bub::after{content:""; position:absolute; left:22px; bottom:-8px; width:14px; height:14px; background:#fff; transform:rotate(45deg)}
-  .bub .c{color:var(--rose); margin-right:6px}
-  .worry .punch{text-align:center; font-family:var(--mincho); font-size:1.25rem; font-weight:800; color:var(--wine); margin-top:8px; line-height:1.6}
+/* ===== sec8 five roles ===== */
+.roles{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;margin:26px 0}
+.role{width:86px;height:86px;border-radius:50%;border:1px solid var(--mocha);display:flex;align-items:center;justify-content:center;font-family:var(--serif-jp);font-size:13px;background:var(--white);color:var(--ink-soft)}
+.roles .eq{font-family:var(--serif-en);font-size:26px;color:var(--gold)}
+.one{text-align:center;font-family:var(--serif-jp);font-size:19px;font-weight:700;margin-top:18px}
+.one b{font-family:var(--serif-en);font-size:42px;color:var(--coral);vertical-align:-4px;padding:0 4px}
 
-  /* ③ アンケート */
-  .survey{background:var(--blue-bg)}
-  .survey .charts{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:24px}
-  .chart{background:#fff; border-radius:16px; padding:22px 18px; text-align:center; box-shadow:var(--shadow-sm)}
-  .chart .q{font-size:.84rem; font-weight:700; color:var(--ink); min-height:2.6em}
-  .donut{width:128px; height:128px; border-radius:50%; margin:14px auto 0; position:relative; background:conic-gradient(var(--rose) 0 var(--p), #e3d3d7 var(--p) 100%)}
-  .donut::after{content:""; position:absolute; inset:20px; background:#fff; border-radius:50%}
-  .donut .v{position:absolute; inset:0; display:grid; place-items:center; font-family:var(--maru); font-weight:900; font-size:1.5rem; color:var(--rose)}
-  .donut .v small{font-size:.7rem; color:var(--ink-soft); display:block}
-  .bars{margin-top:16px; text-align:left; display:grid; gap:12px}
-  .bar .top{display:flex; justify-content:space-between; font-size:.8rem; font-weight:700; margin-bottom:4px}
-  .bar .track{height:14px; background:#e8eef3; border-radius:999px; overflow:hidden}
-  .bar .fill{height:100%; border-radius:999px; background:linear-gradient(90deg,#7fb0cf,#4f8cad)}
-  .survey .result{text-align:center; font-family:var(--mincho); font-size:1.2rem; font-weight:800; color:#3f6b86; margin-top:24px; line-height:1.6}
-  .survey .result .big{color:#e2724f}
+/* ===== sec9 how to ===== */
+.howto-visual{margin:0 -24px 28px;overflow:hidden}
+.howto-visual img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.steps{counter-reset:step;list-style:none;margin:6px 0 12px}
+.steps li{position:relative;padding:0 0 22px 58px;counter-increment:step;font-size:14px;line-height:1.9}
+.steps li::before{content:"0" counter(step);position:absolute;left:0;top:-4px;font-family:var(--serif-en);font-size:30px;font-weight:500;color:#937843}
+.steps li::after{content:"";position:absolute;left:21px;top:36px;bottom:6px;width:1px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps b{font-family:var(--serif-jp)}
 
-  /* ④ 原因 */
-  .cause{background:var(--mauve); color:#fff}
-  .cause .ribbon{background:#fff; color:var(--mauve-d)} .cause .ribbon::before,.cause .ribbon::after{background:#f0dfe3}
-  .ctags{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:18px}
-  .ctag{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); border-radius:999px; padding:8px 16px; font-weight:700; font-size:.85rem}
-  .cbox{background:#fff; color:var(--ink); border-radius:16px; margin-top:16px; overflow:hidden; box-shadow:var(--shadow)}
-  .cbox .ch{display:flex; align-items:center; gap:10px; background:var(--pink-bg); padding:14px 18px; font-family:var(--maru); font-weight:900; color:var(--mauve-d)}
-  .cbox .ch .no{width:30px; height:30px; border-radius:50%; background:var(--rose); color:#fff; display:grid; place-items:center; font-size:.9rem; flex:none}
-  .cbox .cbody{display:flex; gap:14px; padding:16px 18px; align-items:center}
-  .cbox .cbody p{font-size:.88rem} .cbox .cbody img{width:96px; height:72px; object-fit:cover; border-radius:10px; flex:none}
-  .cause .punch{text-align:center; font-family:var(--mincho); font-size:1.15rem; font-weight:800; margin-top:24px; line-height:1.6}
+/* ===== sec10 voices ===== */
+.sec-voice{background:var(--bg2)}
+.voice{background:var(--white);border-radius:12px;padding:22px 20px 18px;margin-bottom:14px;position:relative;box-shadow:0 4px 14px rgba(65,54,46,.05)}
+.voice::before{content:"“";position:absolute;top:2px;left:14px;font-family:var(--serif-en);font-size:54px;color:var(--coral);opacity:.35;line-height:1}
+.voice p{font-size:13.5px;line-height:1.95;margin:0 0 10px;color:var(--ink-soft)}
+.voice .who{font-size:11px;color:#7D6347;letter-spacing:.08em}
+.voice .who::before{content:"── "}
 
-  /* ★ 成分浸透 断面図 */
-  .science{background:linear-gradient(180deg,var(--cream),#fff)}
-  .skinfig{background:#fff; border:1px solid var(--gold-l); border-radius:18px; padding:18px; margin-top:22px; box-shadow:var(--shadow-sm)}
-  .skinfig svg{width:100%; height:auto; display:block; border-radius:12px}
-  .ingr{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:16px}
-  .ingr .i{background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 8px; text-align:center; box-shadow:var(--shadow-sm)}
-  .ingr .i .dot{width:34px; height:34px; border-radius:50%; margin:0 auto 6px; display:grid; place-items:center; color:#fff; font-family:var(--garamond); font-weight:600; font-size:1.05rem}
-  .ingr .i h4{font-size:.82rem; color:var(--wine)} .ingr .i p{font-size:.68rem; color:var(--ink-soft); line-height:1.5}
+/* ===== sec11 price ===== */
+.price-table{width:100%;border-collapse:collapse;font-size:12.5px;margin:22px 0;background:var(--white)}
+.price-table th,.price-table td{border:1px solid var(--line);padding:11px 8px;text-align:center;line-height:1.6}
+.price-table thead th{background:var(--bg2);font-family:var(--serif-jp);font-size:13px}
+.price-table thead th.reco{background:var(--coral);color:#fff;position:relative}
+.price-table tbody th{background:var(--bg2);font-size:11.5px;color:var(--ink-soft);width:24%;font-weight:400;font-family:var(--sans)}
+.price-table .hl{color:var(--coral);font-weight:700;font-size:14px}
+.assure{list-style:none;margin:4px 0 22px}
+.assure li{font-size:13px;padding:6px 0 6px 26px;position:relative;color:var(--ink-soft)}
+.assure li::before{content:"✓";position:absolute;left:2px;color:var(--coral);font-weight:700}
+.limited{border:1px dashed var(--coral);border-radius:10px;background:#FDF3F1;text-align:center;padding:14px;font-size:13px;margin-bottom:6px}
+.limited b{color:var(--coral)}
+.limited small{display:block;font-size:11.5px;color:var(--ink-soft)}
 
-  /* ⑤ こだわり */
-  .feature .fitem{display:flex; gap:16px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; margin-top:16px; box-shadow:var(--shadow-sm)}
-  .feature .fitem:nth-child(even){flex-direction:row-reverse}
-  .feature .fitem img{width:38%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; flex:none}
-  .feature .fitem .pt{font-family:var(--garamond); color:var(--gold-d); font-weight:600; font-size:1rem; letter-spacing:.06em; font-style:italic}
-  .feature .fitem h3{font-family:var(--maru); font-size:1.15rem; margin:2px 0 6px; color:var(--wine)}
-  .feature .fitem p{font-size:.88rem; color:var(--ink-soft)}
+/* ===== sec12 faq ===== */
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-size:14px;font-weight:700;padding:18px 34px 18px 30px;position:relative;line-height:1.7}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:0;top:16px;font-family:var(--serif-en);font-size:18px;color:var(--coral)}
+.faq summary::after{content:"+";position:absolute;right:6px;top:16px;font-family:var(--serif-en);font-size:22px;color:var(--mocha);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{font-size:13.5px;color:var(--ink-soft);padding:0 4px 18px 30px;line-height:1.95}
 
-  /* ★ 実感グラフ Before/After */
-  .proof{background:var(--blue-bg)}
-  .graphcard{background:#fff; border-radius:18px; padding:24px 20px 20px; margin-top:22px; box-shadow:var(--shadow); border:1px solid var(--gold-l)}
-  .graphcard .gh{text-align:center; font-family:var(--maru); font-weight:900; color:var(--wine); font-size:1rem}
-  .ba{display:flex; align-items:flex-end; justify-content:center; gap:30px; margin:22px 0 6px; height:188px}
-  .ba .col{display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; width:84px}
-  .ba .bar2{width:62px; border-radius:12px 12px 0 0; position:relative; display:flex; align-items:flex-start; justify-content:center}
-  .ba .bar2 .val{position:absolute; top:-26px; font-family:var(--mincho); font-weight:800; font-size:1.35rem}
-  .ba .before .bar2{height:38%; background:linear-gradient(180deg,#cdbcc0,#a98f96)}
-  .ba .before .val{color:var(--ink-soft)}
-  .ba .after .bar2{height:88%; background:linear-gradient(180deg,#ef6a8d,var(--cta)); box-shadow:0 8px 20px rgba(226,62,109,.3)}
-  .ba .after .val{color:var(--cta)}
-  .ba .lab{margin-top:8px; font-size:.78rem; font-weight:700; color:var(--ink)}
-  .ba .arrow{align-self:center; font-family:var(--mincho); color:var(--cta); font-weight:800; font-size:1rem; text-align:center; line-height:1.2}
-  .ba .arrow .up{font-size:1.5rem}
-  .proof .note{text-align:center; font-size:.7rem; color:var(--ink-soft); margin-top:6px}
+/* ===== sec13 closing ===== */
+.sec-close{padding:0;background:#2E2620}
+.close-visual{position:relative;overflow:hidden}
+.close-visual img{width:100%;aspect-ratio:4/5;object-fit:cover;opacity:.62}
+@media(min-width:480px){ .close-visual img{aspect-ratio:1/1} }
+.close-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:32px;text-align:center}
+.close-overlay h2{color:#FCF7EF;font-size:clamp(18px,5.2vw,23px);line-height:2;margin-bottom:0;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.close-body{padding:40px 24px 72px;color:#D8CCBC;font-size:14px}
+.close-body .ps{border-top:1px solid rgba(255,255,255,.18);margin-top:24px;padding-top:24px}
+.close-body .ps b{color:#F3D9B8;font-family:var(--serif-jp)}
+.sec-close .cta{margin-top:30px}
 
-  /* ⑥ 使い方 */
-  .howto{background:var(--cream)}
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px}
-  .stp{background:#fff; border-radius:14px; padding:14px; text-align:center; box-shadow:var(--shadow-sm); position:relative}
-  .stp img{border-radius:10px; aspect-ratio:1/1; object-fit:cover; margin-bottom:10px}
-  .stp .n{display:inline-block; background:var(--rose); color:#fff; font-family:var(--maru); font-weight:900; width:26px; height:26px; border-radius:50%; line-height:26px; font-size:.85rem}
-  .stp h4{font-size:.92rem; margin:6px 0 4px} .stp p{font-size:.78rem; color:var(--ink-soft)}
+/* ===== footer / sticky ===== */
+footer{padding:28px 24px 110px;background:var(--bg2);font-size:10px;color:#6E6150;line-height:1.8}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,247,242,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .4s ease}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta a{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,var(--coral),var(--coral-deep));color:#fff;text-decoration:none;font-size:14.5px;font-weight:700;padding:14px;border-radius:99px;max-width:520px;margin:0 auto;box-shadow:0 6px 16px rgba(217,110,95,.35)}
+.sticky-cta a small{font-weight:400;font-size:11px;opacity:.9}
 
-  /* ⑦ 声 */
-  .voices{background:var(--pink-bg)}
-  .vcard{background:#fff; border-radius:16px; padding:20px; margin-top:16px; box-shadow:var(--shadow-sm); position:relative}
-  .vcard::before{content:"“"; position:absolute; top:6px; right:18px; font-family:var(--garamond); font-size:3.4rem; color:var(--gold-l); line-height:1}
-  .vcard .vhead{display:flex; align-items:center; gap:12px}
-  .vcard .vhead img{width:54px; height:54px; border-radius:50%; object-fit:cover; flex:none; border:2px solid #fff; outline:1px solid var(--gold-l)}
-  .vcard .stars{color:#e8a93e; letter-spacing:1px; font-size:.85rem}
-  .vcard .vhead b{font-size:.9rem} .vcard .vhead span{font-size:.76rem; color:var(--ink-soft); display:block}
-  .vcard p{font-size:.9rem; margin-top:12px}
-  .vcard .hl{background:linear-gradient(transparent 60%,var(--gold-l) 60%); font-weight:700}
-
-  /* ⑧ 定期 */
-  .plan{background:#fff}
-  .plan .compare{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:30px; align-items:center}
-  .plancard{border-radius:18px; padding:24px 16px; text-align:center; border:2px solid var(--line)}
-  .plancard.reco{border-color:var(--gold); position:relative; background:linear-gradient(180deg,#fff,var(--pink-bg)); box-shadow:var(--shadow); transform:scale(1.05)}
-  .plancard.reco .tag{position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:linear-gradient(180deg,var(--cta),var(--cta-d)); color:#fff; font-weight:900; font-size:.76rem; padding:6px 16px; border-radius:999px; white-space:nowrap; box-shadow:0 6px 14px rgba(226,62,109,.4)}
-  .plancard h4{font-family:var(--maru); font-size:1rem; color:var(--wine)}
-  .plancard .p{font-family:var(--mincho); font-weight:800; line-height:1.1; margin:8px 0}
-  .plancard .p .num{font-size:2.3rem; color:var(--cta)} .plancard.normal .p .num{color:var(--ink); font-size:1.8rem}
-  .plancard .note{font-size:.74rem; color:var(--ink-soft)}
-
-  /* ⑨ 保証 */
-  .guarantee{background:var(--cream)}
-  .gbox{display:flex; gap:16px; align-items:center; background:#fff; border:2px solid var(--gold-l); border-radius:16px; padding:22px; margin-top:8px; box-shadow:var(--shadow-sm)}
-  .gbox .seal{width:78px; height:78px; border-radius:50%; flex:none; background:linear-gradient(180deg,var(--wine),var(--wine-d)); color:#fff; display:grid; place-items:center; font-family:var(--maru); font-weight:900; font-size:.78rem; line-height:1.2; text-align:center; border:2px solid var(--gold-l)}
-  .gbox p{font-size:.88rem}
-
-  /* ⑩ FAQ */
-  .faq .qa{background:#fff; border:1px solid var(--line); border-radius:12px; margin-top:10px; overflow:hidden}
-  .faq button{width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:16px 18px; font-size:.92rem; font-weight:700; color:var(--wine); display:flex; justify-content:space-between; gap:12px; font-family:inherit; align-items:center}
-  .faq button .q{display:flex; gap:8px} .faq button .q::before{content:"Q."; color:var(--rose); font-family:var(--maru); font-weight:900}
-  .faq .plus{flex:none; color:var(--rose); font-size:1.3rem; transition:.25s}
-  .faq .qa[aria-expanded="true"] .plus{transform:rotate(45deg)}
-  .faq .ab{max-height:0; overflow:hidden; transition:max-height .3s}
-  .faq .ab p{padding:0 18px 16px; font-size:.86rem; color:var(--ink-soft)}
-
-  /* 最終CTA */
-  .final{background:linear-gradient(180deg,var(--wine),var(--wine-d)); color:#fff; text-align:center; position:relative; overflow:hidden}
-  .final::before{content:""; position:absolute; inset:0; background:radial-gradient(80% 50% at 50% 0%,rgba(226,62,109,.4),transparent)}
-  .final .inner{position:relative; z-index:1}
-  .final .eyebrow{color:var(--gold-l)}
-  .final h2{font-family:var(--mincho); font-size:clamp(1.5rem,5.5vw,2rem); font-weight:800; margin-bottom:12px}
-  .final p{font-size:.92rem; opacity:.95; margin-bottom:22px}
-  .final .btn{background:#fff; color:var(--cta)}
-
-  footer{background:#3a2c30; color:#c9b3b8; font-size:.78rem; padding:30px 0; text-align:center}
-  footer .brand{font-family:var(--garamond); font-size:1.5rem; color:#fff; letter-spacing:.14em; font-weight:600}
-  .disclaimer{font-size:.68rem; color:#9c8488; margin-top:12px; line-height:1.7; text-align:left}
-
-  .sticky{position:fixed; bottom:0; left:0; right:0; z-index:60; background:rgba(255,255,255,.96); border-top:1px solid var(--gold-l); padding:9px 14px; backdrop-filter:blur(8px); display:flex; justify-content:center}
-  .sticky .btn{padding:13px 30px; font-size:1.02rem}
-
-  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}.btn.pulse{animation:none}}
-  @media(max-width:360px){.countdown .u{min-width:46px}.medal{width:96px}}
+/* reveal default = visible (JS sets initial states) */
+.reveal{opacity:1}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+}
 </style>
 </head>
 <body>
-<div class="lp">
+<div class="page">
 
-  <!-- ① ヒーロー -->
-  <section class="hero">
-    <div class="bgimg"><img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&fit=crop&w=900&q=72" alt=""></div>
-    <div class="inner">
-      <span class="firstbadge"><span class="ic">★</span> 累計販売 30万本突破</span>
-      <h1>忙しい毎日に、これ1本。<br><span class="y">うるおい</span>で満たす<br>オールインワン美容液</h1>
-      <p class="lead">化粧水・乳液・美容液・クリーム・パック ─ 5役をこれ1本で。</p>
-      <!-- CSS/SVG製 美容液ボトル（実ブランドの写り込み回避） -->
-      <div class="bottle-wrap">
-        <div class="bottle-glow"></div>
-        <svg viewBox="0 0 200 300" aria-label="Lumière オールインワン美容液">
-          <defs>
-            <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#fbe3ea"/><stop offset=".5" stop-color="#e7a6bd"/><stop offset="1" stop-color="#c4708d"/>
-            </linearGradient>
-            <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#f6c9d8"/><stop offset="1" stop-color="#d97a99"/>
-            </linearGradient>
-            <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#caa769"/><stop offset=".5" stop-color="#a9863f"/><stop offset="1" stop-color="#8c6c2f"/>
-            </linearGradient>
-          </defs>
-          <!-- ドロッパーキャップ -->
-          <rect x="78" y="6" width="44" height="40" rx="7" fill="url(#cap)"/>
-          <rect x="86" y="0" width="28" height="12" rx="4" fill="#c9a96a"/>
-          <rect x="90" y="46" width="20" height="14" fill="url(#cap)"/>
-          <!-- ガラス瓶 -->
-          <rect x="50" y="58" width="100" height="230" rx="22" fill="url(#glass)"/>
-          <rect x="50" y="58" width="100" height="230" rx="22" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
-          <!-- 中身 -->
-          <rect x="60" y="120" width="80" height="160" rx="14" fill="url(#liquid)" opacity=".92"/>
-          <!-- ハイライト -->
-          <rect x="64" y="74" width="14" height="196" rx="7" fill="#fff" opacity=".4"/>
-          <!-- ラベル -->
-          <rect x="62" y="150" width="76" height="92" rx="8" fill="#fffdf8" opacity=".96"/>
-          <text x="100" y="183" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="24" font-weight="600" fill="#6e2740" font-style="italic">Lumière</text>
-          <line x1="78" y1="193" x2="122" y2="193" stroke="#c2a062" stroke-width="1"/>
-          <text x="100" y="210" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="8.5" letter-spacing="2" fill="#9c6a74">ALL-IN-ONE SERUM</text>
-          <text x="100" y="228" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="7" letter-spacing="1" fill="#c2a062">MADE IN JAPAN</text>
-        </svg>
-        <div class="stamp">満足度<b>98%</b>※</div>
-      </div>
-      <div class="feats"><span class="feat"><span class="ic">✦</span> 5役オールインワン</span><span class="feat"><span class="ic">✦</span> 6つの無添加</span><span class="feat"><span class="ic">✦</span> 日本製</span></div>
-      <p class="tests">※自社調べ（n=312）。パッチテスト済み（すべての方に刺激が起きないわけではありません）</p>
+<header>
+  <div class="brand">Lumière<small>ALL-IN-ONE SERUM</small></div>
+  <a class="head-cta" href="#offer">初回半額で試す</a>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero full">
+  <div class="hero-visual">
+    <p class="hero-eyebrow">化粧水・乳液・美容液・クリーム・パック ── これ1本。</p>
+    <img id="heroImg"
+      src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=780&q=60"
+      srcset="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=480&q=60 480w, https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=780&q=60 780w, https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=1080&q=60 1080w"
+      sizes="(max-width:560px) 100vw, 560px"
+      alt="やわらかな光のなかに置かれたLumièreのオールインワン美容液" fetchpriority="high">
+  </div>
+  <div class="hero-body">
+    <h1>
+      <span class="line"><span>寝かしつけたあとの私に、</span></span>
+      <span class="line"><span>60秒だけの<em style="font-style:normal;color:var(--coral)">ごほうび</em>を。</span></span>
+    </h1>
+    <p class="hero-sub">がんばる毎日で、自分のケアはいつも後回し。Lumièreは5つの工程をこの1本にまとめた、オールインワン美容液。おやすみ前の60秒で、うるおいを角層のすみずみまで。</p>
+    <div class="badges">
+      <div class="badge">使用感満足度<b><span class="count" data-to="93">93</span><small>%</small></b>※1</div>
+      <div class="badge">シリーズ累計<b><span class="count" data-to="120">120</span><small>万本</small></b>※2</div>
+      <div class="badge">25日間<b style="font-family:var(--serif-jp);font-size:14px;padding-top:6px">全額返金保証</b></div>
     </div>
-  </section>
-
-  <!-- 信頼バッジ帯 -->
-  <div class="trust">
-    <p class="lead">── 多くの女性に選ばれています ──</p>
-    <div class="medals">
-      <div class="medal"><span class="crown">👑</span><div class="laurel">RANKING</div><div class="no"><b>1</b>位</div><div class="cap">美容液 通販<br>デイリーランキング</div></div>
-      <div class="medal"><div class="laurel">★ ★ ★ ★ ★</div><div class="no"><b>4.7</b></div><div class="cap">口コミ評価<br>（n=1,204）</div></div>
-      <div class="medal"><span class="crown">🏅</span><div class="laurel">AWARD</div><div class="no">金賞</div><div class="cap">ビューティー<br>アワード2025</div></div>
-      <div class="medal"><div class="laurel">MEDIA</div><div class="no"><b>12</b>誌</div><div class="cap">雑誌・WEB<br>メディア掲載</div></div>
+    <div class="offer" id="offer">
+      <span class="offer-label">初回限定キャンペーン</span>
+      <div class="was">通常価格 6,980円（税込）</div>
+      <div class="now">3,490<span class="yen">円</span><span class="off">50%OFF</span></div>
+      <div class="offer-terms">税込・送料無料｜回数縛りなし・いつでも解約OK</div>
+      <a class="cta" href="#offer-detail">初回半額ではじめる<small>約60秒で申込完了｜2回目以降もずっと10%OFF</small></a>
+      <p class="micro">25日間全額返金保証つき。合わなければやめられます。</p>
     </div>
   </div>
+</section>
 
-  <!-- 価格ボックス -->
-  <div class="pricebox">
-    <span class="corner">🎀 一番お得な定期コース</span>
-    <p class="normal">通常価格 <s>5,980円</s> のところ<span class="off">67%OFF</span></p>
-    <div class="now"><span class="lab">初回</span><span class="num">1,980</span><span class="yen">円</span><span class="tax">(税込)</span></div>
-    <span class="free">送料無料・2回目以降もずっと20%OFF</span>
-    <div class="conds"><span class="cond">いつでも解約OK</span><span class="cond">回数しばりなし</span></div>
-  </div>
-
-  <!-- 限定オファー枠 -->
-  <div class="limited">
-    <div class="lh">⏳ 本日の特別価格 受付終了まで</div>
-    <div class="countdown" id="cd">
-      <div class="u"><span class="n" id="cd-h">11</span><span class="l">時間</span></div>
-      <span class="sep">:</span>
-      <div class="u"><span class="n" id="cd-m">42</span><span class="l">分</span></div>
-      <span class="sep">:</span>
-      <div class="u"><span class="n" id="cd-s">08</span><span class="l">秒</span></div>
-    </div>
-    <div class="stockbar"><div class="f"></div></div>
-    <p class="stocktxt">本日の初回お試し枠 <b>残り18名</b> / 100名様</p>
-  </div>
-
-  <div class="btn-wrap pad" style="margin-top:18px"><a href="#order" class="btn pulse">今すぐお得に試す<span class="s">＼ 初回1,980円・送料無料 ／</span></a></div>
-  <p class="btn-sub">30日間返金保証つき・クレジット／代引き対応</p>
-
-  <svg class="wave" viewBox="0 0 1200 42" preserveAspectRatio="none"><path d="M0,42 C300,0 900,0 1200,42 Z" fill="#fbecef"></path></svg>
-  <!-- ② 共感 -->
-  <section class="sec worry" style="padding-top:34px">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">Check</span><span class="spark reveal">こんな<span class="em">お悩み</span>、ありませんか？</span></div>
-      <img class="model framed reveal" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=760&q=72" alt="">
-      <div class="bubbles">
-        <div class="bub reveal"><span class="c">✓</span>夕方には乾燥でメイクがヨレる</div>
-        <div class="bub reveal d1"><span class="c">✓</span>最近、ハリ・ツヤがなくなった気が</div>
-        <div class="bub reveal"><span class="c">✓</span>スキンケアに時間をかけられない</div>
-        <div class="bub reveal d1"><span class="c">✓</span>何を使っても物足りない…</div>
-      </div>
-      <svg class="harrow reveal" viewBox="0 0 46 36"><path d="M8,4 C8,22 38,14 38,28 M30,22 L38,30 L46,21"></path></svg>
-      <p class="punch reveal">そのお悩み、<br>「<span class="rose">うるおい不足</span>」が原因かも。</p>
-    </div>
-  </section>
-
-  <svg class="wave" viewBox="0 0 1200 42" preserveAspectRatio="none"><path d="M0,42 C300,0 900,0 1200,42 Z" fill="#eef4f8"></path></svg>
-  <!-- ③ アンケート -->
-  <section class="sec survey" style="padding-top:34px">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">Survey</span></div>
-      <div class="headwrap"><span class="ribbon reveal"><span class="small">＼ 大人の女性300人に聞きました ／</span>みんなのホンネ調査</span></div>
-      <div class="charts">
-        <div class="chart reveal"><div class="q">Q. 肌の乾燥が気になりますか？</div><div class="donut" style="--p:84%"><div class="v">84%<small>気になる</small></div></div></div>
-        <div class="chart reveal d1"><div class="q">Q. スキンケアは時短したい？</div><div class="donut" style="--p:91%"><div class="v">91%<small>したい</small></div></div></div>
-      </div>
-      <div class="chart reveal" style="margin-top:18px">
-        <div class="q" style="min-height:0">Q. 今のスキンケアに感じている不満は？</div>
-        <div class="bars">
-          <div class="bar"><div class="top"><span>うるおいが続かない</span><span>68%</span></div><div class="track"><div class="fill" style="width:68%"></div></div></div>
-          <div class="bar"><div class="top"><span>手間・時間がかかる</span><span>57%</span></div><div class="track"><div class="fill" style="width:57%"></div></div></div>
-          <div class="bar"><div class="top"><span>ベタつく・なじまない</span><span>41%</span></div><div class="track"><div class="fill" style="width:41%"></div></div></div>
-        </div>
-      </div>
-      <p class="result reveal"><span class="big">8割</span>以上の女性が「うるおい」と「時短」を求めている！</p>
-    </div>
-  </section>
-
-  <svg class="wave" viewBox="0 0 1200 42" preserveAspectRatio="none"><path d="M0,42 C300,0 900,0 1200,42 Z" fill="#9c6a74"></path></svg>
-  <!-- ④ 原因 -->
-  <section class="sec cause" style="padding-top:30px">
-    <div class="pad">
-      <div class="headwrap"><span class="ribbon reveal">乾燥の主な原因は「3つ」</span></div>
-      <div class="ctags reveal"><span class="ctag">水分の蒸発</span><span class="ctag">バリア低下</span><span class="ctag">ケア不足</span></div>
-      <div class="cbox reveal"><div class="ch"><span class="no">1</span>肌内部の水分が逃げている</div>
-        <div class="cbody"><p>年齢とともに水分保持力が低下。与えたうるおいも時間とともに蒸発してしまいます。</p>
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=300&q=72" alt=""></div></div>
-      <div class="cbox reveal d1"><div class="ch"><span class="no">2</span>うるおいバリアの乱れ</div>
-        <div class="cbody"><p>乾燥や外的刺激でバリア機能が低下すると、肌はさらに乾きやすく、ゆらぎやすい状態に。</p>
-          <img src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=300&q=72" alt=""></div></div>
-      <div class="cbox reveal"><div class="ch"><span class="no">3</span>忙しさによるケア不足</div>
-        <div class="cbody"><p>「時間がない」とケアを簡略化しがち。届けるべき成分が不足し、乾燥が進む悪循環に。</p>
-          <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=300&q=72" alt=""></div></div>
-      <p class="punch reveal">だからこそ、<br>「うるおいを満たして閉じこめる」ケアを。</p>
-    </div>
-  </section>
-
-  <!-- ★ 成分浸透 断面図 -->
-  <section class="sec science">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">Mechanism</span><span class="spark reveal">うるおいが<span class="em">届く</span>仕組み</span></div>
-      <div class="skinfig reveal">
-        <svg viewBox="0 0 340 220" aria-label="角質層に成分が浸透する断面イメージ">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6f3"/><stop offset="1" stop-color="#fde8ee"/></linearGradient>
-            <linearGradient id="L1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d9c8"/><stop offset="1" stop-color="#eec3b0"/></linearGradient>
-            <linearGradient id="L2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9b79e"/><stop offset="1" stop-color="#d99e82"/></linearGradient>
-            <linearGradient id="L3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cf8f72"/><stop offset="1" stop-color="#b9785b"/></linearGradient>
-          </defs>
-          <rect x="0" y="0" width="340" height="60" fill="url(#sky)"/>
-          <!-- 雫が落ちて浸透 -->
-          <g fill="#d97a99">
-            <path d="M60 20 q7 10 0 18 a9 9 0 1 1 0 -18 z" opacity=".9"/>
-            <path d="M150 12 q6 8 0 15 a7.5 7.5 0 1 1 0 -15 z" opacity=".8"/>
-            <path d="M250 24 q6 8 0 15 a7.5 7.5 0 1 1 0 -15 z" opacity=".85"/>
-          </g>
-          <!-- 肌の層 -->
-          <rect x="0" y="60" width="340" height="44" fill="url(#L1)"/>
-          <rect x="0" y="104" width="340" height="48" fill="url(#L2)"/>
-          <rect x="0" y="152" width="340" height="68" fill="url(#L3)"/>
-          <!-- 浸透する粒子 -->
-          <g fill="#fff">
-            <circle cx="80" cy="80" r="4" opacity=".85"/><circle cx="120" cy="92" r="3" opacity=".7"/>
-            <circle cx="180" cy="84" r="4" opacity=".8"/><circle cx="230" cy="95" r="3" opacity=".7"/>
-            <circle cx="100" cy="122" r="3.5" opacity=".7"/><circle cx="200" cy="128" r="3" opacity=".6"/>
-            <circle cx="270" cy="120" r="3.5" opacity=".65"/><circle cx="150" cy="134" r="3" opacity=".55"/>
-          </g>
-          <!-- ラベル -->
-          <text x="330" y="50" text-anchor="end" font-family="Zen Maru Gothic,sans-serif" font-size="10" fill="#bf546f">うるおい成分</text>
-          <text x="10" y="84" font-family="Zen Maru Gothic,sans-serif" font-size="10" fill="#7e5560">角質層</text>
-          <text x="10" y="130" font-family="Zen Maru Gothic,sans-serif" font-size="10" fill="#fff">うるおい層</text>
-          <text x="10" y="186" font-family="Zen Maru Gothic,sans-serif" font-size="10" fill="#fff">ハリの土台</text>
-        </svg>
-        <p class="center" style="font-size:.78rem;color:var(--ink-soft);margin-top:10px">独自の浸透設計で、うるおい成分が角質層のすみずみへ。※角質層まで。イメージ図です</p>
-      </div>
-      <div class="ingr">
-        <div class="i reveal"><div class="dot" style="background:#d97a99">H</div><h4>ヒアルロン酸</h4><p>水分を抱え込み うるおいキープ</p></div>
-        <div class="i reveal d1"><div class="dot" style="background:#c2a062">C</div><h4>セラミド</h4><p>バリアを整え 乾燥から守る</p></div>
-        <div class="i reveal d2"><div class="dot" style="background:#69b89f">B</div><h4>植物エキス</h4><p>ハリ・ツヤのある印象へ</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ⑤ こだわり -->
-  <section class="sec feature">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">Features</span><span class="spark reveal">Lumière 3つの<span class="em">こだわり</span></span></div>
-      <div class="fitem reveal"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=400&q=72" alt="">
-        <div><div class="pt">Point 01</div><h3>これ1本で5役</h3><p>化粧水・乳液・美容液・クリーム・パックの5役。忙しい朝も夜も、時短で本格ケア。</p></div></div>
-      <div class="fitem reveal d1"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=400&q=72" alt="">
-        <div><div class="pt">Point 02</div><h3>うるおい成分を凝縮</h3><p>ヒアルロン酸・セラミド・植物由来エキスを配合。角質層のすみずみまでうるおいで満たす。</p></div></div>
-      <div class="fitem reveal"><img src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=400&q=72" alt="">
-        <div><div class="pt">Point 03</div><h3>6つの無添加・日本製</h3><p>パラベン・アルコール・着色料など6つフリー。デリケートな肌にも寄り添う設計です。</p></div></div>
-    </div>
-  </section>
-
-  <svg class="wave" viewBox="0 0 1200 42" preserveAspectRatio="none"><path d="M0,42 C300,0 900,0 1200,42 Z" fill="#eef4f8"></path></svg>
-  <!-- ★ 実感グラフ -->
-  <section class="sec proof" style="padding-top:34px">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">Result</span><span class="spark reveal">うるおいの<span class="em">実感</span>を、数字で</span></div>
-      <div class="graphcard reveal">
-        <div class="gh">肌の水分量の変化 <span style="font-size:.78rem;color:var(--ink-soft)">（使用前 → 4週間後）</span></div>
-        <div class="ba">
-          <div class="col before"><div class="bar2"><span class="val">38</span></div><div class="lab">使用前</div></div>
-          <div class="arrow"><span class="up">↗</span><br>+2.3倍</div>
-          <div class="col after"><div class="bar2"><span class="val">88</span></div><div class="lab">4週間後</div></div>
-        </div>
-        <p class="note">※自社調べ（n=312／使用4週間後の角質水分量モニター測定の平均値）。効果には個人差があります。グラフは架空のイメージです。</p>
-      </div>
-    </div>
-  </section>
-
-  <svg class="wave flip" viewBox="0 0 1200 42" preserveAspectRatio="none"><path d="M0,42 C300,0 900,0 1200,42 Z" fill="#fdf6f3"></path></svg>
-  <!-- ⑥ 使い方 -->
-  <section class="sec howto" style="padding-top:30px">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">How to</span><span class="spark reveal">使い方は<span class="em">かんたん</span></span></div>
-      <div class="steps">
-        <div class="stp reveal"><img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&w=300&q=72" alt=""><div class="n">1</div><h4>適量を手に</h4><p>さくらんぼ大を手のひらに。</p></div>
-        <div class="stp reveal d1"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=300&q=72" alt=""><div class="n">2</div><h4>顔全体に</h4><p>包み込むようにやさしく。</p></div>
-        <div class="stp reveal d2"><img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?auto=format&fit=crop&w=300&q=72" alt=""><div class="n">3</div><h4>ハンドプレス</h4><p>手のひらで密着させて完了。</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ⑦ 声 -->
-  <section class="sec voices">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">Voice</span></div>
-      <div class="headwrap"><span class="ribbon reveal"><span class="small">＼ 喜びの声、続々 ／</span>お客様の声</span></div>
-      <p class="center reveal" style="color:var(--ink-soft); font-size:.8rem; margin-top:12px">※効果には個人差があります。下記は感想の一例です。</p>
-      <div class="vcard reveal"><div class="vhead"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=72" alt="">
-        <div><div class="stars">★★★★★</div><b>M.K さん（38歳）</b><span>乾燥肌・会社員</span></div></div>
-        <p>「夕方の乾燥が気にならなく。<span class="hl">朝これ1本だけでメイクのノリが違う</span>。時短なのに手抜き感がないのが嬉しい。」</p></div>
-      <div class="vcard reveal d1"><div class="vhead"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&q=72" alt="">
-        <div><div class="stars">★★★★★</div><b>Y.S さん（45歳）</b><span>混合肌・主婦</span></div></div>
-        <p>「重ねるのが面倒で…これにして<span class="hl">ケアが3分</span>。なのにハリが出た気がします。手放せません。」</p></div>
-      <div class="vcard reveal"><div class="vhead"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=160&q=72" alt="">
-        <div><div class="stars">★★★★☆</div><b>A.T さん（29歳）</b><span>敏感肌・看護師</span></div></div>
-        <p>「無添加で安心。<span class="hl">ベタつかないのにしっとり</span>。夜勤続きで荒れがちな肌が落ち着いてきました。」</p></div>
-    </div>
-  </section>
-
-  <!-- ⑧ 定期 -->
-  <section class="sec plan" id="order">
-    <div class="pad">
-      <div class="headwrap"><span class="eyebrow">Price</span><span class="spark reveal">いちばん<span class="em">お得</span>に始めるなら</span></div>
-      <div class="compare">
-        <div class="plancard normal reveal"><h4>都度購入</h4><div class="p"><span class="num">5,980</span>円</div><p class="note">＋送料550円<br>通常価格</p></div>
-        <div class="plancard reco reveal d1"><span class="tag">🎀 初回67%OFF</span><h4>定期コース</h4><div class="p"><span class="num">1,980</span>円</div><p class="note">送料無料／2回目以降20%OFF<br>いつでも解約OK</p></div>
-      </div>
-    </div>
-    <div class="btn-wrap pad" style="margin-top:24px"><a href="#" class="btn pulse" onclick="alert('※ポートフォリオ用サンプルです。実際は購入カートに接続します。');return false;">定期コースで申し込む<span class="s">＼ 初回1,980円・送料無料 ／</span></a></div>
-    <p class="btn-sub">※在庫には限りがございます。お早めにどうぞ</p>
-  </section>
-
-  <!-- ⑨ 保証 -->
-  <section class="sec guarantee">
-    <div class="pad">
-      <div class="headwrap"><span class="spark reveal" style="font-size:1.4rem">安心の保証</span></div>
-      <div class="gbox reveal" style="margin-top:22px"><div class="seal">25日間<br>返金保証</div>
-        <p>初めての方も安心。お肌に合わなかった場合、初回お届けから25日以内なら<b>全額返金</b>いたします（※条件あり）。</p></div>
-    </div>
-  </section>
-
-  <!-- ⑩ FAQ -->
-  <section class="sec faq pad">
-    <div class="headwrap"><span class="eyebrow">FAQ</span><span class="spark reveal" style="font-size:1.4rem">よくあるご質問</span></div>
-    <div style="margin-top:20px">
-      <div class="qa reveal"><button aria-expanded="false"><span class="q">敏感肌でも使えますか？</span><span class="plus">+</span></button>
-        <div class="ab"><p>6つの無添加処方で、デリケートな肌にも配慮しています。心配な方はパッチテストの上ご使用ください。</p></div></div>
-      <div class="qa reveal"><button aria-expanded="false"><span class="q">定期コースに回数のしばりは？</span><span class="plus">+</span></button>
-        <div class="ab"><p>回数のしばりはありません。いつでも解約・休止が可能です。次回お届けの10日前までにご連絡ください。</p></div></div>
-      <div class="qa reveal"><button aria-expanded="false"><span class="q">どのくらいで効果を感じますか？</span><span class="plus">+</span></button>
-        <div class="ab"><p>うるおいはすぐ実感される方が多いですが、肌の変化には個人差があります。まずは1〜2ヶ月の継続がおすすめです。</p></div></div>
-    </div>
-  </section>
-
-  <!-- 最終CTA -->
-  <section class="sec final">
-    <div class="pad inner">
-      <span class="eyebrow">Start today</span>
-      <h2>今日から、<br>うるおい習慣をはじめよう。</h2>
-      <p>初回1,980円・送料無料・25日間返金保証つき。<br>まずはお気軽にお試しください。</p>
-      <div class="btn-wrap"><a href="#" class="btn" onclick="alert('※ポートフォリオ用サンプルです。実際は購入カートに接続します。');return false;">お得に試してみる<span class="s">＼ 初回1,980円・送料無料 ／</span></a></div>
-    </div>
-  </section>
-
-  <footer><div class="pad">
-    <div class="brand">Lumière</div>
-    <p class="disclaimer">※本ページはポートフォリオ用の架空サンプルです。「Lumière」は実在しない架空の商品で、写真・口コミ・販売実績・数値・受賞歴・ランキング・効果はすべてダミーです。商品ボトルはCSS/SVGで作図したイメージで、背景・小物・人物写真はUnsplashのフリー素材を使用しています。実在の商品・人物・効果効能とは一切関係ありません。</p>
-  </div></footer>
-
+<!-- 2. TRUST -->
+<div class="trust reveal">
+  <div><b>93%が<br>「使い続けたい」</b>※1</div>
+  <div><b>美容誌3誌に<br>掲載</b>※3</div>
+  <div><b>日本製<br>6つの無添加</b></div>
 </div>
 
-<div class="sticky"><a href="#order" class="btn">初回1,980円で試す ≫</a></div>
+<!-- 3. NAYAMI -->
+<section class="sec-nayami">
+  <p class="eyebrow">Is this you?</p>
+  <h2>その「後回し」、<br>もう何日目ですか。</h2>
+  <ul class="check">
+    <li class="reveal">お風呂上がりは子どもの保湿が先。自分は化粧水を「とりあえず」つけて終わり</li>
+    <li class="reveal">化粧水、乳液、美容液……並んだボトルを見るだけで、今日はもういいやと思う</li>
+    <li class="reveal">時間があるなら、数分でも長く寝ていたい</li>
+    <li class="reveal">ふと鏡を見て、乾燥した肌と増えたシミにドキッとした</li>
+    <li class="reveal">「ちゃんとケアしなきゃ」と思うほど、できない自分に落ち込む</li>
+  </ul>
+  <p class="turn reveal">それは、あなたの<br><em>努力不足ではありません。</em></p>
+</section>
 
-<script>
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  document.querySelectorAll('.faq button').forEach(function(b){
-    b.addEventListener('click',function(){var qa=b.parentElement,ab=qa.querySelector('.ab'),open=qa.getAttribute('aria-expanded')==='true';
-      qa.setAttribute('aria-expanded',String(!open)); ab.style.maxHeight=open?null:ab.scrollHeight+'px';});
+<!-- 4. CAUSE -->
+<section>
+  <p class="eyebrow">The real reason</p>
+  <h2>続かないのは意思ではなく、<br>「工程の数」の問題でした。</h2>
+  <p class="lead">化粧水から始まるフルラインのお手入れは、平均5工程・約7分。けれど30〜40代女性の約6割は、スキンケアにかけられる時間が5分未満というデータがあります※4。工程が多いほど、疲れた日のケアは途切れる。そして角層のうるおいは、ケアが途切れた夜にも静かに失われていきます。</p>
+  <div class="graph">
+    <div class="graph-row reveal">
+      <div class="glabel"><b>フルラインのお手入れ</b><span>5工程・約7分</span></div>
+      <div class="gbar" data-bar></div>
+    </div>
+    <div class="graph-row reveal">
+      <div class="glabel"><b>Lumière</b><span>1工程・60秒</span></div>
+      <div class="gbar lum" data-bar>60秒</div>
+    </div>
+    <p class="gnote">※お手入れ工程数・所要時間の概念図</p>
+  </div>
+  <p class="conclude reveal">肌に必要なのは「がんばるケア」ではなく、<br>疲れた日でも<em style="font-style:normal;background:linear-gradient(transparent 68%,rgba(217,110,95,.28) 68%)">続けられる仕組み</em>でした。</p>
+</section>
+
+<!-- 5. SOLUTION -->
+<section class="sec-solution">
+  <p class="eyebrow">Introducing Lumière</p>
+  <h2>5つの工程を、この1本に。<br>うるおいを抱え込んで、逃がさない。</h2>
+  <div class="product-visual" data-clip>
+    <img src="https://images.unsplash.com/photo-1748543668687-624e058c367c?auto=format&fit=crop&w=800&q=62" alt="うるおいを届ける美容液と、閉じ込めるエモリエントのテクスチャが重なり合うイメージ" loading="lazy">
+  </div>
+  <p class="lead">とろみのあるテクスチャが肌の上でほどけ、うるおい成分を角層のすみずみまで届けたあと、エモリエント成分がベールとなって閉じ込めます。</p>
+  <div class="tech-name reveal"><small>Original Formula</small>届けて、閉じ込める。<br>モイストラップ処方<sup>™</sup></div>
+  <p class="lead">洗顔後はこれ1本、わずか60秒。今日が疲れた日でも、肌のための時間は終わっています。</p>
+</section>
+
+<!-- 6. INGREDIENTS -->
+<section>
+  <p class="eyebrow">Ingredients</p>
+  <h2>1本にまとめても、妥協しない。<br>成分には役割があります。</h2>
+  <table class="ing-table reveal">
+    <tr><th>ヒト型セラミド3種</th><td>うるおいを保ち、肌を健やかに保つ</td></tr>
+    <tr><th>3種のヒアルロン酸<small>分子サイズ別に配合</small></th><td>角層のすみずみまでうるおいを届ける</td></tr>
+    <tr><th>ナイアシンアミド</th><td>キメを整え、肌荒れを防ぐ</td></tr>
+    <tr><th>スクワラン・シア脂</th><td>うるおいを閉じ込めるエモリエントベール</td></tr>
+  </table>
+  <p class="note">※うるおいによるもの。浸透は角質層まで。</p>
+  <div class="chips reveal">
+    <span class="chip">パラベン不使用</span><span class="chip">アルコール不使用</span><span class="chip">合成着色料不使用</span><span class="chip">鉱物油不使用</span><span class="chip">紫外線吸収剤不使用</span><span class="chip">石油系界面活性剤不使用</span>
+  </div>
+  <p style="text-align:center;font-size:12.5px;color:#7D6347;letter-spacing:.1em">日本製・パッチテスト済み</p>
+  <div class="ing-visual" data-clip>
+    <img src="https://images.unsplash.com/photo-1748543668646-e81cda0890f3?auto=format&fit=crop&w=800&q=62" alt="役割の異なるうるおい成分のテクスチャ" loading="lazy">
+  </div>
+</section>
+
+<!-- 7. OBJECTIONS -->
+<section class="sec-dark">
+  <p class="eyebrow">Honest answers</p>
+  <h2>「1本で足りるの?」──<br>その不安に、正面から。</h2>
+  <p class="lead">オールインワンを使わない理由の第1位は「1アイテムだけでは効果が不安」（53.1%）※5。当然の不安だと思います。</p>
+  <div class="qa reveal">
+    <p class="q">不安① 物足りなくない?</p>
+    <p class="a">Lumièreは“時短のための薄いケア”ではなく、美容液をベースに5役を設計した高保湿処方。乾燥が特に気になる目もと・口もとには重ねづけもできます。</p>
+  </div>
+  <div class="qa reveal">
+    <p class="q">不安② ベタつかない?</p>
+    <p class="a">とろみは肌の上でほどけて、仕上がりはさらり。おやすみ前に枕につく心配なく使えます（使用感には個人差があります）。</p>
+  </div>
+  <div class="qa reveal">
+    <p class="q">不安③ ポロポロ出ない?</p>
+    <p class="a">メイク前にも使えるよう、膜剤の組み合わせを調整。朝のメイク下地の前にもお使いいただけます。</p>
+  </div>
+  <p class="closer reveal">「結局あれこれ重ねてしまう」方が約半数※5。<br>だからこそ、<em>最初から1本で完結する濃度</em>で<br>設計しました。</p>
+</section>
+
+<!-- 8. FIVE ROLES -->
+<section style="background:var(--white)">
+  <p class="eyebrow">5 in 1</p>
+  <h2>毎晩の5工程が、ひとつになる。</h2>
+  <div class="roles">
+    <div class="role reveal">化粧水</div>
+    <div class="role reveal">乳液</div>
+    <div class="role reveal">美容液</div>
+    <div class="role reveal">クリーム</div>
+    <div class="role reveal">パック</div>
+  </div>
+  <p class="one reveal">すべてを、<b>1</b>本に。</p>
+</section>
+
+<!-- 9. HOW TO -->
+<section>
+  <p class="eyebrow">How to use</p>
+  <h2>今夜から、60秒。</h2>
+  <div class="howto-visual" data-clip>
+    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=62" alt="手のひらに美容液をとるイメージ" loading="lazy">
+  </div>
+  <ol class="steps">
+    <li class="reveal"><b>洗顔後、パール2粒分を手に取る。</b><br>乾いた肌に、これ1本だけ。</li>
+    <li class="reveal"><b>顔の内側から外側へ、やさしくなじませる。</b><br>こすらず、すべらせるように。</li>
+    <li class="reveal"><b>最後に手のひらで包み込む。</b><br>ハンドプレスで、うるおいを閉じ込めて完了。</li>
+  </ol>
+  <p class="note">乾燥が気になる日は、目もと・口もとにもうひと塗り。</p>
+</section>
+
+<!-- 10. VOICES -->
+<section class="sec-voice">
+  <p class="eyebrow">Voices</p>
+  <h2>「自分のための60秒」を<br>取り戻した人たち。</h2>
+  <div class="voice reveal">
+    <p>すーっと伸びて、ベタつかないのにしっとり。寝かしつけのあと、これ1本でベッドに直行できるのが本当にありがたいです。</p>
+    <span class="who">38歳・会社員</span>
+  </div>
+  <div class="voice reveal">
+    <p>ボトルを並べなくていいだけで、洗面所も気持ちも片付きました。ほのかなラベンダーの香りがごほうび感あって好きです。</p>
+    <span class="who">42歳・主婦</span>
+  </div>
+  <div class="voice reveal">
+    <p>夜勤明けでも“とりあえず”じゃなく“ちゃんとケアした”と思える。この安心感が一番うれしい。</p>
+    <span class="who">35歳・看護師</span>
+  </div>
+  <p class="note">※個人の感想です。使用感・香りに関する感想であり、効能効果を示すものではありません。</p>
+</section>
+
+<!-- 11. PRICE -->
+<section id="offer-detail" style="background:var(--white)">
+  <p class="eyebrow">Special offer</p>
+  <h2>初めての方は、半額から。<br><span class="accent">やめたくなったら、いつでも。</span></h2>
+  <table class="price-table reveal">
+    <thead><tr><th></th><th>単品購入</th><th class="reco">定期コース</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">初回</th><td>6,980円</td><td class="hl">3,490円（50%OFF）</td></tr>
+      <tr><th scope="row">2回目以降</th><td>6,980円</td><td>6,282円（ずっと10%OFF）</td></tr>
+      <tr><th scope="row">送料</th><td>550円</td><td>無料</td></tr>
+      <tr><th scope="row">縛り</th><td>−</td><td><b>回数縛りなし</b></td></tr>
+      <tr><th scope="row">保証</th><td>−</td><td>25日間全額返金保証</td></tr>
+    </tbody>
+  </table>
+  <ul class="assure">
+    <li>回数縛りなし。1回だけのお試しでもOK</li>
+    <li>次回お届けの10日前までなら、WEBで解約完了（電話不要）</li>
+    <li>肌に合わなければ、開封後でも返金対象</li>
+  </ul>
+  <div class="limited reveal">初回半額は<b>毎月先着500名</b>※6<small>今月中のお申込みでオリジナル泡立てネットをプレゼント</small></div>
+  <a class="cta" href="#offer">初回半額 3,490円ではじめる<small>税込・送料無料｜約60秒で申込完了</small></a>
+</section>
+
+<!-- 12. FAQ -->
+<section>
+  <p class="eyebrow">FAQ</p>
+  <h2>よくあるご質問</h2>
+  <div class="faq">
+    <details><summary>定期コースの解約方法は?</summary><p class="ans">回数の縛りはありません。次回お届け予定日の10日前までに、マイページからいつでも手続きできます（電話不要）。</p></details>
+    <details><summary>肌に合わなかったら?</summary><p class="ans">お届けから25日以内であれば、開封・使用後でも全額返金保証の対象です。</p></details>
+    <details><summary>敏感肌でも使えますか?</summary><p class="ans">6つの無添加処方で、パッチテスト済みです（すべての方に肌トラブルが起きないわけではありません）。</p></details>
+    <details><summary>朝のメイク前にも使えますか?</summary><p class="ans">はい。なじませた後すぐに下地に進めるよう設計しています。</p></details>
+    <details><summary>ライン使いと併用できますか?</summary><p class="ans">できます。特に乾燥が気になる部分への重ねづけがおすすめです。</p></details>
+  </div>
+</section>
+
+<!-- 13. CLOSING -->
+<section class="sec-close full">
+  <div class="close-visual">
+    <img src="https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=800&q=62" alt="一日の終わりの、静かなスキンケアの時間" loading="lazy">
+    <div class="close-overlay">
+      <h2 class="reveal">肌のために<br>何もできなかった夜を、<br>責めなくていい。</h2>
+    </div>
+  </div>
+  <div class="close-body">
+    <p>今日もたくさんのことを後回しにして、誰かのために動いた一日だったと思います。だからこそ、一日の終わりの60秒だけ、自分の肌に戻ってきてください。</p>
+    <p>Lumièreは、その60秒のためにつくられた1本です。</p>
+    <div class="ps">
+      <p><b>P.S.</b>　いちばん負担なく始められるのは、初回半額・送料無料・返金保証つきの今日です。合わなければやめられます。まずは25日間、お試しください。</p>
+    </div>
+    <a class="cta" href="#offer">初回半額 3,490円ではじめる<small>回数縛りなし｜25日間全額返金保証</small></a>
+  </div>
+</section>
+
+<footer>
+  ※1〜6 本ページはWeb制作ポートフォリオ用の架空商品・架空データです。実在の商品・調査・販売を示すものではありません（※4・※5のみ実在の公開調査を参考に構成）。<br>
+  本LPは薬機法・景表法に配慮した表現設計の見本を兼ねています。｜写真: Unsplash
+</footer>
+
+</div><!-- /.page -->
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="#offer-detail">初回半額 3,490円ではじめる<small>縛りなし・返金保証</small></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', () => {
+  // sticky CTA (JSなしでも本文CTAは機能する)
+  const sticky = document.getElementById('stickyCta');
+  const hero = document.querySelector('.hero');
+  const closing = document.querySelector('.sec-close');
+  if ('IntersectionObserver' in window && sticky) {
+    let pastHero = false, inClose = false;
+    const update = () => sticky.classList.toggle('show', pastHero && !inClose);
+    new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; update(); }, {rootMargin:'-120px'}).observe(hero);
+    new IntersectionObserver(([e]) => { inClose = e.isIntersecting; update(); }).observe(closing);
+  }
+
+  // Webフォントは初回描画後に注入(FCPの完全非依存化。未適用時はヒラギノ明朝)
+  const loadFonts = () => {
+    const l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = 'https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap';
+    document.head.appendChild(l);
+  };
+  // アニメ初期化は初回描画後のidleまで遅延(TBT対策)
+  const initAnim = () => {
+  loadFonts();
+  if (typeof gsap === 'undefined') return; // CDN失敗時は全要素表示のまま
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Lenis smooth scroll (PCのみ・タッチはネイティブ)
+  if (typeof Lenis !== 'undefined' && !window.matchMedia('(pointer: coarse)').matches) {
+    const lenis = new Lenis({ duration: 1.05, anchors: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((t) => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  const mm = gsap.matchMedia();
+  mm.add({
+    motion: '(prefers-reduced-motion: no-preference)',
+    reduce: '(prefers-reduced-motion: reduce)'
+  }, (ctx) => {
+    if (ctx.conditions.reduce) return;
+
+    // hero: 行マスクリビール（LCPはhero画像なのでテキストのみ遅延）
+    gsap.from('.hero h1 .line span', { yPercent: 110, duration: 1.0, ease: 'power3.out', stagger: 0.14, delay: 0.15 });
+    gsap.from('.hero-sub, .hero .badges, .hero .offer', { y: 24, opacity: 0, duration: 0.9, ease: 'power2.out', stagger: 0.12, delay: 0.55 });
+    // hero画像: ゆっくりKen Burns（opacityは触らない=LCP安全）
+    gsap.fromTo('#heroImg', { scale: 1.08 }, { scale: 1, duration: 2.2, ease: 'power2.out' });
+
+    // 汎用リビール
+    gsap.utils.toArray('.reveal').forEach((el) => {
+      gsap.from(el, { y: 28, opacity: 0, duration: 0.9, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' } });
+    });
+
+    // 画像クリップリビール
+    gsap.utils.toArray('[data-clip] img').forEach((img) => {
+      gsap.fromTo(img, { clipPath: 'inset(12% 6% 12% 6%)', scale: 1.06 },
+        { clipPath: 'inset(0% 0% 0% 0%)', scale: 1, duration: 1.2, ease: 'power2.out',
+          scrollTrigger: { trigger: img, start: 'top 85%' } });
+    });
+
+    // 工程グラフ
+    gsap.utils.toArray('[data-bar]').forEach((bar) => {
+      gsap.from(bar, { scaleX: 0, duration: 1.1, ease: 'power3.out',
+        scrollTrigger: { trigger: bar, start: 'top 90%' } });
+    });
+
+    // カウントアップ
+    gsap.utils.toArray('.count').forEach((el) => {
+      const to = +el.dataset.to;
+      const obj = { v: 0 };
+      gsap.to(obj, { v: to, duration: 1.4, ease: 'power2.out', snap: { v: 1 },
+        onUpdate: () => { el.textContent = obj.v; },
+        scrollTrigger: { trigger: el, start: 'top 92%' } });
+    });
+
+    // クロージング画像 弱パララックス
+    gsap.to('.close-visual img', { yPercent: 8, ease: 'none',
+      scrollTrigger: { trigger: '.sec-close', start: 'top bottom', end: 'bottom top', scrub: true } });
   });
-  // 限定オファーのカウントダウン（その日の終わりまで）
-  (function(){
-    var h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
-    if(!h)return;
-    function pad(n){return(n<10?'0':'')+n;}
-    function tick(){
-      var now=new Date();var end=new Date(now.getFullYear(),now.getMonth(),now.getDate(),23,59,59);
-      var d=Math.max(0,Math.floor((end-now)/1000));
-      h.textContent=pad(Math.floor(d/3600));m.textContent=pad(Math.floor(d%3600/60));s.textContent=pad(d%60);
-    }
-    tick();setInterval(tick,1000);
-  })();
+  };
+  if (document.readyState === 'complete') {
+    ('requestIdleCallback' in window) ? requestIdleCallback(initAnim, {timeout:1200}) : setTimeout(initAnim, 150);
+  } else {
+    window.addEventListener('load', () => {
+      ('requestIdleCallback' in window) ? requestIdleCallback(initAnim, {timeout:1200}) : setTimeout(initAnim, 150);
+    }, {once:true});
+  }
+});
 </script>
 </body>
 </html>
